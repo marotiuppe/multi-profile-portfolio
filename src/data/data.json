@@ -1,0 +1,789 @@
+{
+  "profiles": {
+    "maroti": {
+      "status": "active",
+      "personalInfo": {
+        "fullName": "Maroti Uppe",
+        "email": "marotiuppe891@gmail.com",
+        "phone": "+91 9867205329",
+        "location": "Hyderabad, Telangana, India",
+        "profileImageName": "maroti-profile.jpg",
+        "initials": "MU",
+        "positionTitle": "Software Developer at Corpus Enterprises Private Limited",
+        "tagline": "Java | Spring Boot | Angular | React",
+        "about": "Hi, I'm Maroti. I am a Full Stack Developer with {experience} of professional experience. I specialize in building modern web applications using Java, Spring Boot, Angular, and React.",
+        "summary": "Full Stack Developer who knows Java and the Spring framework. I'm looking for a job where I can use my skills to help the company grow. I have experience creating web applications that are easy to use and maintain. I focus on writing clean code and delivering good results. I'm eager to keep learning and growing with the team.",
+        "experienceStartDate": "2022-05-06",
+        "personalBackground": "I hail from Maharashtra, India, where I completed my graduation from Mumbai University in 2021. Coming from a close-knit family of six siblings - four elder sisters and a younger brother - I learned the values of responsibility and perseverance early in life. Since 2010, following the passing of my father, I've embraced the role of a responsible family member, balancing my professional growth with family responsibilities. This experience has shaped me into a more dedicated and resilient professional, bringing these same values of commitment and responsibility to my work.",
+        "history": [
+          "Started my professional journey in 2022 at Corpus Enterprises Private Limited as a Full Stack Developer.",
+          "Gained extensive experience in Java Spring Boot and Hibernate for backend development, creating robust and efficient server-side applications.",
+          "Developed expertise in Angular and Bootstrap for frontend development, focusing on creating responsive and user-friendly interfaces.",
+          "Worked on various enterprise-level applications, contributing to both backend and frontend development while following best practices and design patterns."
+        ],
+        "technicalExpertise": {
+          "Backend": "Java, Spring Boot, Hibernate, RESTful APIs",
+          "Frontend": "Angular, React, TypeScript, Bootstrap, HTML, CSS",
+          "Database": "MySQL",
+          "Tools": "Git, Maven, Postman, Swagger, VS Code",
+          "Practices": "Agile Methodology, Clean Code, Design Patterns"
+        },
+        "currentFocus": [
+          "Developing and maintaining enterprise applications using Spring Boot and Angular",
+          "Implementing robust backend solutions with Java and Hibernate",
+          "Creating responsive and intuitive user interfaces with Angular and Bootstrap",
+          "Following best practices in software development and design patterns"
+        ],
+        "dreams": [
+          "Mastering advanced concepts in Spring Boot and Angular",
+          "Contributing to larger and more complex enterprise solutions",
+          "Expanding my knowledge in cloud technologies and microservices",
+          "Growing as a technical leader and mentor"
+        ],
+        "funFacts": [
+          "I have developed numerous applications from scratch.",
+          "I enjoy solving complex algorithmic problems.",
+          "I've mentored junior developers and conducted technical training sessions.",
+          "I contribute to open-source projects in my free time.",
+          "I can debug code while drinking coffee, simultaneously."
+        ]
+      },
+      "navigation": {
+        "brandName": "MAROTI UPPE",
+        "links": [
+          { "path": "/maroti", "label": "HOME" },
+          { "path": "/maroti/about", "label": "ABOUT" },
+          { "path": "/maroti/resume", "label": "RESUME" },
+          { "path": "/maroti/projects", "label": "PROJECTS" },
+          { "path": "/maroti/contact", "label": "CONTACT" }
+        ]
+      },
+      "socialLinks": [
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/maroti-uppe-ba9b2a1b7/",
+          "label": "LinkedIn"
+        },
+        {
+          "type": "whatsapp",
+          "url": "https://wa.me/message/55WZCOBNHZHNN1",
+          "label": "WhatsApp"
+        }
+      ],
+      "resume": {
+        "experiences": [
+          {
+            "company": "Corpus Enterprises Private Limited",
+            "startDate": "2023-06-01",
+            "endDate": "present",
+            "position": "Software Developer",
+            "location": "Hyderabad, Telangana, India",
+            "workType": "On-site",
+            "technologies": "Angular, React, Spring, Spring boot, Hibernate"
+          },
+          {
+            "company": "Corpus Enterprises Private Limited",
+            "startDate": "2022-05-01",
+            "endDate": "2023-06-01",
+            "position": "Junior Software Engineer",
+            "location": "Hyderabad, Telangana, India",
+            "workType": "Hybrid",
+            "technologies": "Java, Struts, Hibernate, Html-css-Js, Jsp, MySQL"
+          }
+        ],
+        "projects": [
+          {
+            "name": "AP FIBER (Live Web Application)",
+            "startDate": "2022-05-01",
+            "endDate": "2023-06-01",
+            "technologies": "Java, MySQL, JSP, JS, XML, RestAPI, Struts, Hibernate, Eclipse, SVN, SQLYog, Postman"
+          },
+          {
+            "name": "SMS and DRM",
+            "startDate": "2023-06-01",
+            "endDate": "present",
+            "technologies": "Java, Spring, Spring Boot, Hibernate, Angular, RestAPI, MySQL, Maven, STS, SVN, SQLYog, Postman"
+          },
+          {
+            "name": "Task Management System",
+            "startDate": "2024-01-01",
+            "endDate": "present",
+            "technologies": "Spring Boot, Angular, MySQL, REST APIs, JWT Authentication, Bootstrap"
+          },
+          {
+            "name": "Portfolio Website",
+            "startDate": "2024-02-01",
+            "endDate": "present",
+            "technologies": "React, Bootstrap, HTML/CSS, JavaScript, Responsive Design"
+          }
+        ],
+        "education": [
+          {
+            "degree": "Bachelor of Engineering - Electronics and Telecommunications Engineering",
+            "school": "ANJUMAN-I-ISLAMS SCHOOL OF ENGINEERING AND TECHNOLOGY",
+            "startDate": "2018-01-01",
+            "endDate": "2021-12-31",
+            "grade": "CGPA: 9.5",
+            "location": "Mumbai"
+          },
+          {
+            "degree": "Diploma, Electronics And Telecommunications",
+            "school": "RAJIV GANDHI POLYTECHNIC COLLEGE",
+            "startDate": "2014-06-01",
+            "endDate": "2017-06-30",
+            "grade": "Grade: 79%",
+            "location": "Udgir"
+          },
+          {
+            "degree": "10th Grade",
+            "school": "RANI LAXMI BAI HIGH SCHOOL",
+            "startDate": "2014-01-01",
+            "endDate": "2014-12-31",
+            "grade": "Grade: 78%",
+            "location": "Nanded"
+          }
+        ],
+        "skills": {
+          "Backend": [
+            { "name": "Java", "level": 90 },
+            { "name": "Spring Boot", "level": 90 },
+            { "name": "Hibernate", "level": 85 },
+            { "name": "RESTful APIs", "level": 85 }
+          ],
+          "Frontend": [
+            { "name": "Angular", "level": 80 },
+            { "name": "React", "level": 65 },
+            { "name": "TypeScript", "level": 70 },
+            { "name": "Bootstrap", "level": 60 },
+            { "name": "HTML", "level": 90 },
+            { "name": "CSS", "level": 80 }
+          ],
+          "Database": [
+            { "name": "MySQL", "level": 85 }
+          ],
+          "Tools": [
+            { "name": "Maven", "level": 85 },
+            { "name": "Postman", "level": 85 },
+            { "name": "Swagger", "level": 80 },
+            { "name": "VS Code", "level": 90 }
+          ],
+          "Practices": [
+            { "name": "Agile Methodology", "level": 85 },
+            { "name": "Clean Code", "level": 85 },
+            { "name": "Design Patterns", "level": 80 }
+          ]
+        },
+        "socialLinks": [
+          {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/maroti-u-448324199/",
+            "icon": "fab fa-linkedin"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/marotiuppe",
+            "icon": "fab fa-github"
+          },
+          {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/maroti_uppe/",
+            "icon": "fab fa-instagram"
+          },
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/maroti.uppe",
+            "icon": "fab fa-facebook"
+          },
+          {
+            "name": "WhatsApp",
+            "url": "https://wa.me/message/55WZCOBNHZHNN1",
+            "icon": "fab fa-whatsapp"
+          }
+        ]
+      },
+      "projects": [
+        {
+          "title": "TOTAL VIEW",
+          "date": "June 2023 - Present",
+          "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+          "technologies": "Java, Spring, Spring Boot, Hibernate, Angular, RestAPI, MySQL, Maven, STS, SVN, SQLYog, Postman",
+          "image": "total-view.png",
+          "link": "https://uat.sscbpl.com/totalview/#/login"
+        },
+        {
+          "title": "DRM",
+          "date": "June 2023 - Present",
+          "description": "Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+          "technologies": "Java, Spring, Spring Boot, Hibernate, Angular, RestAPI, MySQL, Maven, STS, SVN, SQLYog, Postman",
+          "image": "drm.png",
+          "link": "https://uat.sscbpl.com/drm/#/login"
+        },
+        {
+          "title": "APSFL",
+          "date": "May 2022 - June 2023",
+          "description": "Government initiative providing Triple Play services (IPTV, Internet, Telephone) to rural Andhra Pradesh. Built network management system connecting 1000+ nodes, enabling affordable and reliable digital connectivity for rural development.",
+          "technologies": "Java, MySQL, JSP, JS, XML, RestAPI, Struts, Hibernate, Eclipse, SVN, SQLYog, Postman",
+          "image": "apsfl.png",
+          "link": "https://github.com/marotiuppe"
+        },
+        {
+          "title": "Task Management System",
+          "date": "September 2024 - Present",
+          "description": "Team collaboration tool featuring task prioritization, sprint planning, and progress tracking. Includes JWT authentication and real-time notifications for seamless team coordination.",
+          "technologies": "Spring Boot, Angular, MySQL, REST APIs, JWT Authentication, Bootstrap",
+          "image": "task-management.png",
+          "link": "https://github.com/marotiuppe"
+        },
+        {
+          "title": "Portfolio Website",
+          "date": "January 2025 - Present",
+          "description": "Modern portfolio showcasing professional experience and projects. Features responsive design, optimized performance, and interactive UI components with SEO best practices.",
+          "technologies": "React, Bootstrap, HTML/CSS, JavaScript, Responsive Design",
+          "image": "portfolio.png",
+          "link": "https://marotiuppe.github.io/portfolio/"
+        }
+      ],
+      "site": {
+        "title": "Portfolio Showcase",
+        "introduction": "Welcome to my portfolio website, where modern web development meets clean design. Built with React and enhanced with contemporary tools to deliver an engaging user experience.",
+        "technicalStack": {
+          "title": "Built With",
+          "description": "Leveraging modern web development tools:",
+          "technologies": [
+            {
+              "name": "React 19",
+              "description": "Delivering a seamless and responsive user experience with React's latest features"
+            },
+            {
+              "name": "React Router",
+              "description": "Managing navigation and state with efficient client-side routing"
+            },
+            {
+              "name": "Bootstrap & React Bootstrap",
+              "description": "Ensuring consistent, responsive layouts across all screen sizes"
+            },
+            {
+              "name": "Framer Motion",
+              "description": "Creating engaging page transitions and micro-interactions"
+            },
+            {
+              "name": "React Icons",
+              "description": "Adding visual elements with a versatile icon library"
+            }
+          ]
+        },
+        "developmentApproach": {
+          "title": "Development Process",
+          "description": "Crafted with attention to detail and modern best practices:",
+          "practices": [
+            "Component-driven development for consistent UI patterns",
+            "Mobile-first design principles for universal accessibility",
+            "Performance optimization through code splitting",
+            "SEO-friendly structure and meta-data",
+            "Clean and documented codebase"
+          ]
+        },
+        "deployment": {
+          "title": "Site Architecture",
+          "description": "Built and optimized using React Scripts, resulting in a fast-loading static site. The build process ensures optimal performance and reliable hosting compatibility."
+        },
+        "footer": {
+          "text": "Thank you for visiting my portfolio. Feel free to explore my projects and reach out for collaboration opportunities.",
+          "sourceCode": {
+            "text": "Explore the code",
+            "url": "https://github.com/marotiuppe/my-portfolio"
+          }
+        }
+      }
+    },
+    "kapil": {
+      "status": "active",
+      "personalInfo": {
+        "fullName": "Kapil Jadhav",
+        "email": "kapiljadhav5656@gmail.com",
+        "phone": "+91 7083487227",
+        "location": "Hyderabad, Telangana, India",
+        "profileImageName": "kapil-profile.jpeg",
+        "initials": "KA",
+        "positionTitle": "Software Developer at Wellness 360 Technologies Inc",
+        "tagline": "React Native | Nextjs | React | TypeScript | Redux | JavaScript | HTML5 & CSS3 | Java | DSA",
+        "about": "I am a passionate Software Developer with expertise in building modern web applications and mobile solutions. My journey in software development has been driven by a deep interest in creating efficient, user-friendly, and scalable applications.",
+        "summary": "I specialize in developing responsive web applications using Next.js, React.js, and mobile applications using React Native. My work involves creating intuitive user interfaces, implementing complex functionalities, and ensuring optimal performance across different devices and platforms. I believe in writing clean, maintainable code and following best practices. My approach involves understanding project requirements thoroughly, planning effectively, and implementing solutions that are both efficient and scalable. I'm passionate about staying updated with the latest technologies and continuously improving my skills.",
+        "experienceStartDate": "2023-01-01",
+        "personalBackground": "I am from Maharashtra, India, where I completed my education from Savitribai Phule Pune University. I have a strong foundation in computer science and a passion for building modern web applications. My journey in software development began with learning the basics of HTML, CSS, and JavaScript, which eventually led me to explore more advanced technologies like React, Node.js, and MongoDB.",
+        "history": [
+          "Started my professional journey in 2023 at Wellness 360 Technologies Inc as a Software Developer.",
+          "Developed expertise in React Native for mobile app development, creating cross-platform applications for both Android and iOS.",
+          "Gained extensive experience in Next.js and TypeScript for building modern web applications with improved performance and type safety.",
+          "Worked on integrating third-party APIs such as Google Fit, Samsung Health, and Fitbit to enhance the functionality of health tracking applications."
+        ],
+        "technicalExpertise": {
+          "Frontend": "React.js, Next.js, TypeScript, HTML5, CSS3, Tailwind CSS",
+          "Mobile Development": "React Native, iOS & Android Development",
+          "Backend Integration": "RESTful APIs, Node.js, Express.js",
+          "Version Control": "Git, GitHub",
+          "Development Tools": "VS Code, Chrome DevTools, Postman",
+          "Programming": "JavaScript, TypeScript, Data Structures and Algorithms"
+        },
+        "currentFocus": [
+          "Developing responsive web applications using Next.js and React.js",
+          "Building cross-platform mobile applications with React Native",
+          "Creating intuitive user interfaces with modern design principles",
+          "Implementing efficient and scalable solutions",
+          "Staying updated with the latest technologies and best practices"
+        ],
+        "dreams": [
+          "Mastering advanced concepts in React Native and Next.js",
+          "Contributing to innovative health and wellness solutions",
+          "Expanding knowledge in mobile app development and cross-platform solutions",
+          "Growing as a technical leader in the health tech industry",
+          "Building impactful applications that make a difference"
+        ],
+        "funFacts": [
+          "I have developed multiple mobile applications from concept to deployment",
+          "I enjoy solving complex UI/UX challenges in mobile applications",
+          "I've contributed to open-source projects in the React ecosystem",
+          "I can code while listening to music, which helps me focus better",
+          "I'm passionate about health and wellness technologies"
+        ]
+      },
+      "navigation": {
+        "brandName": "KAPIL JADHAV",
+        "links": [
+          { "path": "/kapil", "label": "HOME" },
+          { "path": "/kapil/about", "label": "ABOUT" },
+          { "path": "/kapil/resume", "label": "RESUME" },
+          { "path": "/kapil/projects", "label": "PROJECTS" },
+          { "path": "/kapil/contact", "label": "CONTACT" }
+        ]
+      },
+      "socialLinks": [
+        {
+          "type": "linkedin",
+          "url": "linkedin.com/in/kapil-jadhav5656/",
+          "label": "LinkedIn"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/kapil-kumar-007",
+          "label": "GitHub"
+        }
+      ],
+      "resume": {
+        "experiences": [
+          {
+            "company": "Wellness 360 Technologies Inc",
+            "startDate": "2023-01-01",
+            "endDate": "present",
+            "position": "Software Developer",
+            "location": "Hyderabad, Telangana, India",
+            "workType": "On-site",
+            "technologies": "Next.js, React, TypeScript, React Native, HTML5, CSS3, Material UI"
+          }
+        ],
+        "projects": [
+          {
+            "name": "Wellness 360 Health Mobile App",
+            "startDate": "2023-01-01",
+            "endDate": "present",
+            "technologies": "React Native, TypeScript, Figma, Google Fit API, Samsung Health API, Fitbit API"
+          },
+          {
+            "name": "Wellness 360 Web Platform",
+            "startDate": "2023-01-01",
+            "endDate": "present",
+            "technologies": "Next.js, React, TypeScript, HTML5, CSS3, Material UI"
+          }
+        ],
+        "education": [
+          {
+            "degree": "Full Stack Developer",
+            "school": "Newton School",
+            "startDate": "2022-03-01",
+            "endDate": "2022-10-31",
+            "grade": "Grade: A",
+            "location": "Online",
+            "details": "200+ DSA Problems solved, Minor & Major MERN Stack Projects. Data Structure and Algorithms, HTML5, CSS3, Javascript, React.JS, Node JS, Express JS, MongoDB, MySQL, Softskills"
+          },
+          {
+            "degree": "Master of Science",
+            "school": "Savitribai Phule Pune University",
+            "startDate": "2019-08-01",
+            "endDate": "2021-05-31",
+            "location": "Rayat Shikshan Sansthas S.S.G.M.Science, Gautam Arts & Sanjeevani Commerce College, Kopargaon, Dist.Ahmednagar 423601"
+          },
+          {
+            "degree": "Bachelor of Science",
+            "school": "Savitribai Phule Pune University",
+            "startDate": "2015-01-01",
+            "endDate": "2018-12-31",
+            "grade": "Grade: 76.33%",
+            "location": "Rayat Shikshan Sansthas S.S.G.M.Science, Gautam Arts & Sanjeevani Commerce College, Kopargaon, Dist.Ahmednagar 423601"
+          }
+        ],
+        "skills": {
+          "Frontend": [
+            { "name": "React", "level": 90 },
+            { "name": "Next.js", "level": 85 },
+            { "name": "TypeScript", "level": 80 },
+            { "name": "HTML5", "level": 90 },
+            { "name": "CSS3", "level": 85 },
+            { "name": "Material UI", "level": 80 },
+            { "name": "Redux.js", "level": 75 },
+            { "name": "Hooks", "level": 85 },
+            { "name": "ECMAScript", "level": 80 },
+            { "name": "Bootstrap", "level": 80 }
+          ],
+          "Mobile Development": [
+            { "name": "React Native", "level": 85 },
+            { "name": "Mobile Applications", "level": 80 }
+          ],
+          "Backend": [
+            { "name": "Node.js", "level": 80 },
+            { "name": "Express.js", "level": 75 },
+            { "name": "MongoDB", "level": 75 },
+            { "name": "MySQL", "level": 70 },
+            { "name": "RESTful APIs", "level": 80 }
+          ],
+          "Programming": [
+            { "name": "JavaScript", "level": 90 },
+            { "name": "Data Structures and Algorithms", "level": 85 },
+            { "name": "Object-Oriented Programming (OOP)", "level": 80 }
+          ],
+          "Tools": [
+            { "name": "Git", "level": 80 },
+            { "name": "Figma", "level": 75 }
+          ],
+          "Soft Skills": [
+            { "name": "Communication", "level": 85 },
+            { "name": "Problem Solving", "level": 85 }
+          ]
+        },
+        "socialLinks": [
+          {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/kapil-kumar-b700001b7/",
+            "icon": "fab fa-linkedin"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/kapil-kumar-007",
+            "icon": "fab fa-github"
+          }
+        ]
+      },
+      "projects": [
+        {
+          "title": "CountryInfo Mobile App",
+          "date": "January 2023 - Present",
+          "description": "A comprehensive mobile application that provides detailed information about countries worldwide. Users can search for countries, view detailed information including population, capital, languages, currencies, and more. The app features a clean, intuitive interface with smooth navigation and responsive design.",
+          "technologies": "React, Next.js, TypeScript, Tailwind CSS, REST API, Vercel",
+          "image": "countryinfo.png",
+          "link": "https://country-info-eight.vercel.app/"
+        },
+        {
+          "title": "Wellness360 App",
+          "date": "January 2023 - Present",
+          "description": "A comprehensive health and wellness application that aggregates data from various health apps and devices. The app provides personalized health challenges, habit tracking, and a detailed health journey visualization. Users can monitor their progress, set goals, and receive insights to improve their overall well-being through an intuitive and engaging interface.",
+          "technologies": "React Native, JavaScript, TypeScript, Redux, REST API, Firebase",
+          "image": "wellness360.png",
+          "link": "https://play.google.com/store/apps/details?id=com.wellness360.app&hl=en_IN"
+        },
+        {
+          "title": "healthier 901 App",
+          "date": "January 2023 - Present",
+          "description": "A comprehensive health and wellness application that aggregates data from various health apps and devices. The app provides personalized health challenges, habit tracking, and a detailed health journey visualization. Users can monitor their progress, set goals, and receive insights to improve their overall well-being through an intuitive and engaging interface.",
+          "technologies": "React Native, JavaScript, TypeScript, Redux, REST API, Firebase",
+          "image": "healthier901.png",
+          "link": "https://play.google.com/store/apps/details?id=com.healthier901.app&hl=en_IN"
+        }
+      ],
+      "site": {
+        "title": "About My Portfolio",
+        "introduction": "Welcome to my digital space! This portfolio is crafted with modern web technologies to showcase my professional journey and technical expertise in an elegant and interactive way.",
+        "technicalStack": {
+          "title": "Technology Stack",
+          "description": "This portfolio harnesses the power of modern web technologies:",
+          "technologies": [
+            {
+              "name": "React 19",
+              "description": "Powering the interactive UI components with the latest React features and hooks"
+            },
+            {
+              "name": "React Router",
+              "description": "Enabling dynamic routing with smooth page transitions and nested routes"
+            },
+            {
+              "name": "Bootstrap & React Bootstrap",
+              "description": "Creating a polished, mobile-first interface with customizable components"
+            },
+            {
+              "name": "Framer Motion",
+              "description": "Adding fluid animations and interactive transitions between states"
+            },
+            {
+              "name": "React Icons",
+              "description": "Enhancing the UI with a rich collection of customizable icons"
+            }
+          ]
+        },
+        "developmentApproach": {
+          "title": "Development Strategy",
+          "description": "Built with a focus on user experience and code quality:",
+          "practices": [
+            "Modular React components for maximum reusability",
+            "Responsive layouts that adapt seamlessly to any device",
+            "Dynamic routing for a smooth, app-like experience",
+            "Optimized bundle size for faster page loads",
+            "Semantic HTML and ARIA labels for accessibility"
+          ]
+        },
+        "deployment": {
+          "title": "Deployment Strategy",
+          "description": "Optimized for performance through static site generation, utilizing React Scripts for production builds. The result is a fast, reliable, and easily maintainable web application."
+        },
+        "footer": {
+          "text": "Explore my work and let's discuss how we can collaborate on your next project.",
+          "sourceCode": {
+            "text": "View the source code",
+            "url": "https://github.com/kapil-kumar-007/portfolio"
+          }
+        }
+      }
+    },
+    "shubham": {
+      "status": "active",
+      "personalInfo": {
+        "fullName": "Shubham Pawar",
+        "email": "pshubham270@gmail.com",
+        "phone": "+91 7888250411",
+        "location": "Pune, Maharashtra, India",
+        "profileImageName": "shubham-profile.jpeg",
+        "initials": "SP",
+        "positionTitle": "Java Developer at Improveid Technologies India Pvt Ltd",
+        "tagline": "Java | Spring Boot | Microservices | Angular",
+        "about": "Hi, I'm Shubham. I am a Java Developer with {experience} of professional experience. I specialize in building modern web applications using Java, Spring Boot, and Angular.",
+        "summary": "Java Developer with 1 year 9 months of experience in Java and J2EE technologies. Proficient in Spring Framework, Spring Boot, and comfortable working with various IDEs and tools. Seeking a position to utilize my skills and abilities in the Information Technology Industry that offers professional growth while being resourceful, innovative and flexible.",
+        "experienceStartDate": "2022-08-01",
+        "personalBackground": "I am from Pune, Maharashtra, India, where I completed my education from Savitribai Phule Pune University. I have a strong foundation in computer science and a passion for building enterprise applications. My journey in software development began with learning Java and gradually expanded to include Spring Framework and Angular.",
+        "history": [
+          "Started my professional journey in 2022 at Improveid Technologies India Pvt Ltd as a Java Developer.",
+          "Gained extensive experience in Spring Framework and Spring Boot for backend development, creating robust and efficient server-side applications.",
+          "Developed expertise in Angular for frontend development, focusing on creating responsive and user-friendly interfaces.",
+          "Worked on various enterprise-level applications, contributing to both backend and frontend development while following best practices and design patterns."
+        ],
+        "technicalExpertise": {
+          "Programming Languages": "Java/J2EE",
+          "Frameworks": "Spring Core, Spring JDBC, Spring AOP, Spring Transactions, Spring MVC, Spring Data JPA, Spring ORM (Hibernate), Spring REST, Spring Boot, Hibernate",
+          "Web Technologies": "HTML, CSS, JavaScript, Angular",
+          "Database": "PostgreSQL",
+          "Tools": "Maven, Gradle, Git, Jira, IntelliJ IDEA, Eclipse, Spring Tool Suite, Visual Studio Code",
+          "Servers": "Apache Tomcat",
+          "Cloud": "AWS"
+        },
+        "currentFocus": [
+          "Developing and maintaining enterprise applications using Spring Boot and Angular",
+          "Implementing robust backend solutions with Java and Hibernate",
+          "Creating responsive and intuitive user interfaces with Angular",
+          "Following best practices in software development and design patterns"
+        ],
+        "dreams": [
+          "Mastering advanced concepts in Spring Boot and Microservices",
+          "Contributing to larger and more complex enterprise solutions",
+          "Expanding my knowledge in cloud technologies and containerization",
+          "Growing as a technical leader and mentor"
+        ],
+        "funFacts": [
+          "I have developed numerous applications from scratch.",
+          "I enjoy solving complex algorithmic problems.",
+          "I've mentored junior developers and conducted technical training sessions.",
+          "I contribute to open-source projects in my free time.",
+          "I can debug code while drinking coffee, simultaneously."
+        ]
+      },
+      "navigation": {
+        "brandName": "SHUBHAM PAWAR",
+        "links": [
+          { "path": "/shubham", "label": "HOME" },
+          { "path": "/shubham/about", "label": "ABOUT" },
+          { "path": "/shubham/resume", "label": "RESUME" },
+          { "path": "/shubham/projects", "label": "PROJECTS" },
+          { "path": "/shubham/contact", "label": "CONTACT" }
+        ]
+      },
+      "socialLinks": [
+        {
+          "type": "linkedin",
+          "url": "https://www.linkedin.com/in/shubham-pawar/",
+          "label": "LinkedIn"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/shubham-pawar",
+          "label": "GitHub"
+        }
+      ],
+      "resume": {
+        "experiences": [
+          {
+            "company": "Improveid Technologies India Pvt Ltd",
+            "startDate": "2022-08-01",
+            "endDate": "present",
+            "position": "Java Developer",
+            "location": "Hyderabad, Telangana, India",
+            "workType": "On-site",
+            "technologies": "Java, Spring Boot, Microservices, Angular, PostgreSQL, AWS"
+          }
+        ],
+        "projects": [
+          {
+            "name": "IMPROVEID (Secure Identity Services & Smart Authenticators)",
+            "startDate": "2022-08-01",
+            "endDate": "present",
+            "technologies": "Windows, PostgreSQL, AWS Cloud Platform, Java, Spring, Spring Boot, Microservices, RESTful Web Service, Gradle, Angular, Git, Apache, Keycloak"
+          }
+        ],
+        "education": [
+          {
+            "degree": "Bachelor of Engineering in Information Technology",
+            "school": "SPPU University",
+            "startDate": "2016-01-01",
+            "endDate": "2020-12-31",
+            "grade": "CGPA: 6.76",
+            "location": "Pune, Maharashtra"
+          }
+        ],
+        "skills": {
+          "Programming Languages": [
+            { "name": "Java/J2EE", "level": 90 }
+          ],
+          "Frameworks": [
+            { "name": "Spring Core", "level": 85 },
+            { "name": "Spring JDBC", "level": 85 },
+            { "name": "Spring AOP", "level": 80 },
+            { "name": "Spring Transactions", "level": 80 },
+            { "name": "Spring MVC", "level": 85 },
+            { "name": "Spring Data JPA", "level": 85 },
+            { "name": "Spring ORM (Hibernate)", "level": 85 },
+            { "name": "Spring REST", "level": 85 },
+            { "name": "Spring Boot", "level": 85 },
+            { "name": "Hibernate", "level": 85 }
+          ],
+          "Web Technologies": [
+            { "name": "HTML", "level": 80 },
+            { "name": "CSS", "level": 80 },
+            { "name": "JavaScript", "level": 80 },
+            { "name": "Angular", "level": 75 }
+          ],
+          "Database": [
+            { "name": "PostgreSQL", "level": 80 }
+          ],
+          "Tools": [
+            { "name": "Maven", "level": 85 },
+            { "name": "Gradle", "level": 85 },
+            { "name": "Git", "level": 80 },
+            { "name": "Jira", "level": 80 },
+            { "name": "IntelliJ IDEA", "level": 90 },
+            { "name": "Eclipse", "level": 85 },
+            { "name": "Spring Tool Suite", "level": 85 },
+            { "name": "Visual Studio Code", "level": 80 }
+          ],
+          "Servers": [
+            { "name": "Apache Tomcat", "level": 85 }
+          ],
+          "Cloud": [
+            { "name": "AWS", "level": 75 }
+          ]
+        },
+        "socialLinks": [
+          {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/shubham-pawar/",
+            "icon": "fab fa-linkedin"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/shubham-pawar",
+            "icon": "fab fa-github"
+          }
+        ]
+      },
+      "projects": [
+        {
+          "title": "CountryInfo Mobile App",
+          "date": "January 2023 - Present",
+          "description": "A comprehensive mobile application that provides detailed information about countries worldwide. Users can search for countries, view detailed information including population, capital, languages, currencies, and more. The app features a clean, intuitive interface with smooth navigation and responsive design.",
+          "technologies": "React, Next.js, TypeScript, Tailwind CSS, REST API, Vercel",
+          "link": "https://github.com/shubham-pawar"
+        },
+        {
+          "title": "Wellness360 App",
+          "date": "January 2023 - Present",
+          "description": "A comprehensive health and wellness application that aggregates data from various health apps and devices. The app provides personalized health challenges, habit tracking, and a detailed health journey visualization. Users can monitor their progress, set goals, and receive insights to improve their overall well-being through an intuitive and engaging interface.",
+          "technologies": "React Native, JavaScript, TypeScript, Redux, REST API, Firebase",
+          "link": "https://github.com/shubham-pawar"
+        },
+        {
+          "title": "healthier 901 App",
+          "date": "January 2023 - Present",
+          "description": "A comprehensive health and wellness application that aggregates data from various health apps and devices. The app provides personalized health challenges, habit tracking, and a detailed health journey visualization. Users can monitor their progress, set goals, and receive insights to improve their overall well-being through an intuitive and engaging interface.",
+          "technologies": "React Native, JavaScript, TypeScript, Redux, REST API, Firebase",
+          "image": "healthier901.png",
+          "link": "https://github.com/shubham-pawar"
+        }
+      ],
+      "site": {
+        "title": "Java Developer Portfolio",
+        "introduction": "Welcome to my portfolio website, where I showcase my expertise in Java development and modern web technologies. Built with React and enhanced with contemporary tools to deliver an engaging user experience.",
+        "technicalStack": {
+          "title": "Built With",
+          "description": "Leveraging modern web development tools:",
+          "technologies": [
+            {
+              "name": "React 19",
+              "description": "Delivering a seamless and responsive user experience with React's latest features"
+            },
+            {
+              "name": "React Router",
+              "description": "Managing navigation and state with efficient client-side routing"
+            },
+            {
+              "name": "Bootstrap & React Bootstrap",
+              "description": "Ensuring consistent, responsive layouts across all screen sizes"
+            },
+            {
+              "name": "Framer Motion",
+              "description": "Creating engaging page transitions and micro-interactions"
+            },
+            {
+              "name": "React Icons",
+              "description": "Adding visual elements with a versatile icon library"
+            }
+          ]
+        },
+        "developmentApproach": {
+          "title": "Development Process",
+          "description": "Crafted with attention to detail and modern best practices:",
+          "practices": [
+            "Component-driven development for consistent UI patterns",
+            "Mobile-first design principles for universal accessibility",
+            "Performance optimization through code splitting",
+            "SEO-friendly structure and meta-data",
+            "Clean and documented codebase"
+          ]
+        },
+        "deployment": {
+          "title": "Site Architecture",
+          "description": "Built and optimized using React Scripts, resulting in a fast-loading static site. The build process ensures optimal performance and reliable hosting compatibility."
+        },
+        "footer": {
+          "text": "Thank you for visiting my portfolio. Feel free to explore my projects and reach out for collaboration opportunities.",
+          "sourceCode": {
+            "text": "Explore the code",
+            "url": "https://github.com/shubham-pawar/portfolio"
+          }
+        }
+      }
+    }
+  }
+} 

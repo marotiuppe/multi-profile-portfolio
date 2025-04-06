@@ -1,0 +1,238 @@
+.profile-container {
+  padding: 0rem 1rem 0rem 6rem;
+  border-radius: 4px;
+  height: 100%;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.profile-container::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.profile-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.profile-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.avatar-container {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.initials {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #666;
+  margin: 0 auto 1rem;
+}
+
+.name-container {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.full-name {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.email {
+  color: #666;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.email:hover {
+  color: #333;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1.5rem 0;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.section-text {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #666;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: #333;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.section-text:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #eaeaea;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  background: transparent;
+}
+
+.learn-more-btn:hover {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+  text-decoration: none;
+}
+
+.expertise-list {
+  display: block;
+  margin-top: 1rem;
+  white-space: pre-line;
+  line-height: 1.8;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.expertise-list::before {
+  content: "";
+  display: block;
+  height: 1rem;
+}
+
+/* Add extra space before each category except the first one */
+.expertise-list:not(:empty) {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+/* Make category headers stand out */
+.expertise-list {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    height: auto;
+    max-height: none;
+    overflow-y: auto;
+  }
+
+  .avatar-container {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+  }
+
+  .initials {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+  }
+
+  .name-container {
+    text-align: center;
+  }
+
+  .email {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .section-text {
+    text-align: left;
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .email {
+    font-size: 0.85rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+
+  .learn-more-btn {
+    font-size: 0.7rem;
+  }
+
+  .expertise-list {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-top: 0.75rem;
+  }
+} 
