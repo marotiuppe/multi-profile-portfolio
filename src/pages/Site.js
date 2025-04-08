@@ -20,7 +20,6 @@ const Site = () => {
       <div className="page-container">
         <h1 className="page-title">{site.title}</h1>
         <div className="page-content">
-          <VisitStats />
           <p>{site.introduction}</p>
 
           <h2>{site.technicalStack.title}</h2>
@@ -57,6 +56,7 @@ const Site = () => {
             .
           </p>
         </div>
+        <VisitStats />
       </div>
     );
   }

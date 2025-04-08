@@ -4,7 +4,7 @@
       "status": "active",
       "personalInfo": {
         "fullName": "Maroti Uppe",
-        "email": "marotiuppe891@gmail.com",
+        "email": "marotiuppe892@gmail.com",
         "phone": "+91 9867205329",
         "location": "Hyderabad, Telangana, India",
         "profileImageName": "maroti-profile.jpg",
@@ -51,10 +51,22 @@
       "navigation": {
         "brandName": "MAROTI UPPE",
         "links": [
-          { "path": "/maroti/about", "label": "ABOUT" },
-          { "path": "/maroti/resume", "label": "RESUME" },
-          { "path": "/maroti/projects", "label": "PROJECTS" },
-          { "path": "/maroti/contact", "label": "CONTACT" }
+          {
+            "path": "/maroti/about",
+            "label": "ABOUT"
+          },
+          {
+            "path": "/maroti/resume",
+            "label": "RESUME"
+          },
+          {
+            "path": "/maroti/projects",
+            "label": "PROJECTS"
+          },
+          {
+            "path": "/maroti/contact",
+            "label": "CONTACT"
+          }
         ]
       },
       "socialLinks": [
@@ -144,32 +156,86 @@
         ],
         "skills": {
           "Backend": [
-            { "name": "Java", "level": 90 },
-            { "name": "Spring Boot", "level": 90 },
-            { "name": "Hibernate", "level": 85 },
-            { "name": "RESTful APIs", "level": 85 }
+            {
+              "name": "Java",
+              "level": 90
+            },
+            {
+              "name": "Spring Boot",
+              "level": 90
+            },
+            {
+              "name": "Hibernate",
+              "level": 85
+            },
+            {
+              "name": "RESTful APIs",
+              "level": 85
+            }
           ],
           "Frontend": [
-            { "name": "Angular", "level": 80 },
-            { "name": "React", "level": 65 },
-            { "name": "TypeScript", "level": 70 },
-            { "name": "Bootstrap", "level": 60 },
-            { "name": "HTML", "level": 90 },
-            { "name": "CSS", "level": 80 }
+            {
+              "name": "Angular",
+              "level": 80
+            },
+            {
+              "name": "React",
+              "level": 65
+            },
+            {
+              "name": "TypeScript",
+              "level": 70
+            },
+            {
+              "name": "Bootstrap",
+              "level": 60
+            },
+            {
+              "name": "HTML",
+              "level": 90
+            },
+            {
+              "name": "CSS",
+              "level": 80
+            }
           ],
           "Database": [
-            { "name": "MySQL", "level": 85 }
+            {
+              "name": "MySQL",
+              "level": 85
+            }
           ],
           "Tools": [
-            { "name": "Maven", "level": 85 },
-            { "name": "Postman", "level": 85 },
-            { "name": "Swagger", "level": 80 },
-            { "name": "VS Code", "level": 90 }
+            {
+              "name": "Maven",
+              "level": 85
+            },
+            {
+              "name": "Postman",
+              "level": 85
+            },
+            {
+              "name": "Swagger",
+              "level": 80
+            },
+            {
+              "name": "VS Code",
+              "level": 90
+            }
           ],
           "Practices": [
-            { "name": "Agile Methodology", "level": 85 },
-            { "name": "Clean Code", "level": 85 },
-            { "name": "Design Patterns", "level": 80 }
+            {
+              "name": "Agile Methodology",
+              "level": 85
+            },
+            {
+              "name": "Clean Code",
+              "level": 85
+            },
+            {
+              "name": "Design Patterns",
+              "level": 80
+            }
           ]
         },
         "socialLinks": [
@@ -290,7 +356,7 @@
           "text": "Thank you for visiting my portfolio. Feel free to explore my projects and reach out for collaboration opportunities.",
           "sourceCode": {
             "text": "Explore the code",
-            "url": "https://github.com/marotiuppe/my-portfolio"
+            "url": "https://github.com/marotiuppe/multi-profile-portfolio"
           }
         }
       }
@@ -349,10 +415,22 @@
       "navigation": {
         "brandName": "KAPIL JADHAV",
         "links": [
-          { "path": "/kapil/about", "label": "ABOUT" },
-          { "path": "/kapil/resume", "label": "RESUME" },
-          { "path": "/kapil/projects", "label": "PROJECTS" },
-          { "path": "/kapil/contact", "label": "CONTACT" }
+          {
+            "path": "/kapil/about",
+            "label": "ABOUT"
+          },
+          {
+            "path": "/kapil/resume",
+            "label": "RESUME"
+          },
+          {
+            "path": "/kapil/projects",
+            "label": "PROJECTS"
+          },
+          {
+            "path": "/kapil/contact",
+            "label": "CONTACT"
+          }
         ]
       },
       "socialLinks": [
@@ -421,40 +499,112 @@
         ],
         "skills": {
           "Frontend": [
-            { "name": "React", "level": 90 },
-            { "name": "Next.js", "level": 85 },
-            { "name": "TypeScript", "level": 80 },
-            { "name": "HTML5", "level": 90 },
-            { "name": "CSS3", "level": 85 },
-            { "name": "Material UI", "level": 80 },
-            { "name": "Redux.js", "level": 75 },
-            { "name": "Hooks", "level": 85 },
-            { "name": "ECMAScript", "level": 80 },
-            { "name": "Bootstrap", "level": 80 }
+            {
+              "name": "React",
+              "level": 90
+            },
+            {
+              "name": "Next.js",
+              "level": 85
+            },
+            {
+              "name": "TypeScript",
+              "level": 80
+            },
+            {
+              "name": "HTML5",
+              "level": 90
+            },
+            {
+              "name": "CSS3",
+              "level": 85
+            },
+            {
+              "name": "Material UI",
+              "level": 80
+            },
+            {
+              "name": "Redux.js",
+              "level": 75
+            },
+            {
+              "name": "Hooks",
+              "level": 85
+            },
+            {
+              "name": "ECMAScript",
+              "level": 80
+            },
+            {
+              "name": "Bootstrap",
+              "level": 80
+            }
           ],
           "Mobile Development": [
-            { "name": "React Native", "level": 85 },
-            { "name": "Mobile Applications", "level": 80 }
+            {
+              "name": "React Native",
+              "level": 85
+            },
+            {
+              "name": "Mobile Applications",
+              "level": 80
+            }
           ],
           "Backend": [
-            { "name": "Node.js", "level": 80 },
-            { "name": "Express.js", "level": 75 },
-            { "name": "MongoDB", "level": 75 },
-            { "name": "MySQL", "level": 70 },
-            { "name": "RESTful APIs", "level": 80 }
+            {
+              "name": "Node.js",
+              "level": 80
+            },
+            {
+              "name": "Express.js",
+              "level": 75
+            },
+            {
+              "name": "MongoDB",
+              "level": 75
+            },
+            {
+              "name": "MySQL",
+              "level": 70
+            },
+            {
+              "name": "RESTful APIs",
+              "level": 80
+            }
           ],
           "Programming": [
-            { "name": "JavaScript", "level": 90 },
-            { "name": "Data Structures and Algorithms", "level": 85 },
-            { "name": "Object-Oriented Programming (OOP)", "level": 80 }
+            {
+              "name": "JavaScript",
+              "level": 90
+            },
+            {
+              "name": "Data Structures and Algorithms",
+              "level": 85
+            },
+            {
+              "name": "Object-Oriented Programming (OOP)",
+              "level": 80
+            }
           ],
           "Tools": [
-            { "name": "Git", "level": 80 },
-            { "name": "Figma", "level": 75 }
+            {
+              "name": "Git",
+              "level": 80
+            },
+            {
+              "name": "Figma",
+              "level": 75
+            }
           ],
           "Soft Skills": [
-            { "name": "Communication", "level": 85 },
-            { "name": "Problem Solving", "level": 85 }
+            {
+              "name": "Communication",
+              "level": 85
+            },
+            {
+              "name": "Problem Solving",
+              "level": 85
+            }
           ]
         },
         "socialLinks": [
@@ -602,10 +752,22 @@
       "navigation": {
         "brandName": "SHUBHAM PAWAR",
         "links": [
-          { "path": "/shubham/about", "label": "ABOUT" },
-          { "path": "/shubham/resume", "label": "RESUME" },
-          { "path": "/shubham/projects", "label": "PROJECTS" },
-          { "path": "/shubham/contact", "label": "CONTACT" }
+          {
+            "path": "/shubham/about",
+            "label": "ABOUT"
+          },
+          {
+            "path": "/shubham/resume",
+            "label": "RESUME"
+          },
+          {
+            "path": "/shubham/projects",
+            "label": "PROJECTS"
+          },
+          {
+            "path": "/shubham/contact",
+            "label": "CONTACT"
+          }
         ]
       },
       "socialLinks": [
@@ -652,44 +814,122 @@
         ],
         "skills": {
           "Programming Languages": [
-            { "name": "Java/J2EE", "level": 90 }
+            {
+              "name": "Java/J2EE",
+              "level": 90
+            }
           ],
           "Frameworks": [
-            { "name": "Spring Core", "level": 85 },
-            { "name": "Spring JDBC", "level": 85 },
-            { "name": "Spring AOP", "level": 80 },
-            { "name": "Spring Transactions", "level": 80 },
-            { "name": "Spring MVC", "level": 85 },
-            { "name": "Spring Data JPA", "level": 85 },
-            { "name": "Spring ORM (Hibernate)", "level": 85 },
-            { "name": "Spring REST", "level": 85 },
-            { "name": "Spring Boot", "level": 85 },
-            { "name": "Hibernate", "level": 85 }
+            {
+              "name": "Spring Core",
+              "level": 85
+            },
+            {
+              "name": "Spring JDBC",
+              "level": 85
+            },
+            {
+              "name": "Spring AOP",
+              "level": 80
+            },
+            {
+              "name": "Spring Transactions",
+              "level": 80
+            },
+            {
+              "name": "Spring MVC",
+              "level": 85
+            },
+            {
+              "name": "Spring Data JPA",
+              "level": 85
+            },
+            {
+              "name": "Spring ORM (Hibernate)",
+              "level": 85
+            },
+            {
+              "name": "Spring REST",
+              "level": 85
+            },
+            {
+              "name": "Spring Boot",
+              "level": 85
+            },
+            {
+              "name": "Hibernate",
+              "level": 85
+            }
           ],
           "Web Technologies": [
-            { "name": "HTML", "level": 80 },
-            { "name": "CSS", "level": 80 },
-            { "name": "JavaScript", "level": 80 },
-            { "name": "Angular", "level": 75 }
+            {
+              "name": "HTML",
+              "level": 80
+            },
+            {
+              "name": "CSS",
+              "level": 80
+            },
+            {
+              "name": "JavaScript",
+              "level": 80
+            },
+            {
+              "name": "Angular",
+              "level": 75
+            }
           ],
           "Database": [
-            { "name": "PostgreSQL", "level": 80 }
+            {
+              "name": "PostgreSQL",
+              "level": 80
+            }
           ],
           "Tools": [
-            { "name": "Maven", "level": 85 },
-            { "name": "Gradle", "level": 85 },
-            { "name": "Git", "level": 80 },
-            { "name": "Jira", "level": 80 },
-            { "name": "IntelliJ IDEA", "level": 90 },
-            { "name": "Eclipse", "level": 85 },
-            { "name": "Spring Tool Suite", "level": 85 },
-            { "name": "Visual Studio Code", "level": 80 }
+            {
+              "name": "Maven",
+              "level": 85
+            },
+            {
+              "name": "Gradle",
+              "level": 85
+            },
+            {
+              "name": "Git",
+              "level": 80
+            },
+            {
+              "name": "Jira",
+              "level": 80
+            },
+            {
+              "name": "IntelliJ IDEA",
+              "level": 90
+            },
+            {
+              "name": "Eclipse",
+              "level": 85
+            },
+            {
+              "name": "Spring Tool Suite",
+              "level": 85
+            },
+            {
+              "name": "Visual Studio Code",
+              "level": 80
+            }
           ],
           "Servers": [
-            { "name": "Apache Tomcat", "level": 85 }
+            {
+              "name": "Apache Tomcat",
+              "level": 85
+            }
           ],
           "Cloud": [
-            { "name": "AWS", "level": 75 }
+            {
+              "name": "AWS",
+              "level": 75
+            }
           ]
         },
         "socialLinks": [
@@ -827,10 +1067,22 @@
       "navigation": {
         "brandName": "MANOJ KUMAR",
         "links": [
-          { "path": "/manoj/about", "label": "ABOUT" },
-          { "path": "/manoj/resume", "label": "RESUME" },
-          { "path": "/manoj/projects", "label": "PROJECTS" },
-          { "path": "/manoj/contact", "label": "CONTACT" }
+          {
+            "path": "/manoj/about",
+            "label": "ABOUT"
+          },
+          {
+            "path": "/manoj/resume",
+            "label": "RESUME"
+          },
+          {
+            "path": "/manoj/projects",
+            "label": "PROJECTS"
+          },
+          {
+            "path": "/manoj/contact",
+            "label": "CONTACT"
+          }
         ]
       },
       "socialLinks": [
@@ -894,41 +1146,89 @@
             "link": "https://uat.sscbpl.com/totalview/#/login"
           },
           {
-            "name":"DRM",
-            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
-            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"drm.png",
-            "link":"https://uat.sscbpl.com/drm/#/login"
+            "name": "DRM",
+            "description": "Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "drm.png",
+            "link": "https://uat.sscbpl.com/drm/#/login"
           },
           {
             "name": "Task Management System",
             "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"task-management.png",
-            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
+            "image": "task-management.png",
+            "link": "https://uat.sscbpl.com/taskmanagement/#/login"
           }
         ],
         "skills": {
           "Testing": [
-            { "name": "Software Testing", "level": 90 },
-            { "name": "Web Testing", "level": 85 },
-            { "name": "API Testing", "level": 85 },
-            { "name": "Mobile App Testing", "level": 80 },
-            { "name": "Manual Testing", "level": 80 },
-            { "name": "Regression Testing", "level": 85 },
-            { "name": "Integration Testing", "level": 80 },
-            { "name": "Sanity Testing", "level": 80 }
+            {
+              "name": "Software Testing",
+              "level": 90
+            },
+            {
+              "name": "Web Testing",
+              "level": 85
+            },
+            {
+              "name": "API Testing",
+              "level": 85
+            },
+            {
+              "name": "Mobile App Testing",
+              "level": 80
+            },
+            {
+              "name": "Manual Testing",
+              "level": 80
+            },
+            {
+              "name": "Regression Testing",
+              "level": 85
+            },
+            {
+              "name": "Integration Testing",
+              "level": 80
+            },
+            {
+              "name": "Sanity Testing",
+              "level": 80
+            }
           ],
           "Tools": [
-            { "name": "Jira", "level": 85 },
-            { "name": "Postman API", "level": 80 },
-            { "name": "Android Studio", "level": 75 },
-            { "name": "Microsoft Office", "level": 80 },
-            { "name": "Microsoft Excel", "level": 80 }
+            {
+              "name": "Jira",
+              "level": 85
+            },
+            {
+              "name": "Postman API",
+              "level": 80
+            },
+            {
+              "name": "Android Studio",
+              "level": 75
+            },
+            {
+              "name": "Microsoft Office",
+              "level": 80
+            },
+            {
+              "name": "Microsoft Excel",
+              "level": 80
+            }
           ],
           "Methodologies": [
-            { "name": "SDLC", "level": 85 },
-            { "name": "Test Planning", "level": 80 },
-            { "name": "Test Cases", "level": 80 }
+            {
+              "name": "SDLC",
+              "level": 85
+            },
+            {
+              "name": "Test Planning",
+              "level": 80
+            },
+            {
+              "name": "Test Cases",
+              "level": 80
+            }
           ]
         },
         "socialLinks": [
@@ -940,38 +1240,38 @@
         ]
       },
       "projects": [
-          {
-            "name": "AP FIBER (Live Web Application)",
-            "date": "December 2022 - Present",
-            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
-            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image": "apsfl.png",
-            "link": "https://apsfl.in/about.php"
-          },
-          {
-            "name": "TOTAL VIEW",
-            "date": "June 2023 - present",
-            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
-            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image": "total-view.png",
-            "link": "https://uat.sscbpl.com/totalview/#/login"
-          },
-          {
-            "name":"DRM",
-            "date":"June 2023 - present",
-            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
-            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"drm.png",
-            "link":"https://uat.sscbpl.com/drm/#/login"
-          },
-          {
-            "name": "Task Management System",
-            "date": "2024-01-01 - present",
-            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"task-management.png",
-            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
-          }
-        ],
+        {
+          "name": "AP FIBER (Live Web Application)",
+          "date": "December 2022 - Present",
+          "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "apsfl.png",
+          "link": "https://apsfl.in/about.php"
+        },
+        {
+          "name": "TOTAL VIEW",
+          "date": "June 2023 - present",
+          "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "total-view.png",
+          "link": "https://uat.sscbpl.com/totalview/#/login"
+        },
+        {
+          "name": "DRM",
+          "date": "June 2023 - present",
+          "description": "Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "drm.png",
+          "link": "https://uat.sscbpl.com/drm/#/login"
+        },
+        {
+          "name": "Task Management System",
+          "date": "2024-01-01 - present",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "task-management.png",
+          "link": "https://uat.sscbpl.com/taskmanagement/#/login"
+        }
+      ],
       "site": {
         "title": "Software Test Engineer Portfolio",
         "introduction": "Welcome to my portfolio website, where I showcase my expertise in software testing and quality assurance. Built with attention to detail and a focus on delivering high-quality software solutions.",
@@ -1070,10 +1370,22 @@
       "navigation": {
         "brandName": "SATYAPRAKASH",
         "links": [
-          { "path": "/satya/about", "label": "ABOUT" },
-          { "path": "/satya/resume", "label": "RESUME" },
-          { "path": "/satya/projects", "label": "PROJECTS" },
-          { "path": "/satya/contact", "label": "CONTACT" }
+          {
+            "path": "/satya/about",
+            "label": "ABOUT"
+          },
+          {
+            "path": "/satya/resume",
+            "label": "RESUME"
+          },
+          {
+            "path": "/satya/projects",
+            "label": "PROJECTS"
+          },
+          {
+            "path": "/satya/contact",
+            "label": "CONTACT"
+          }
         ]
       },
       "socialLinks": [
@@ -1106,26 +1418,74 @@
         ],
         "skills": {
           "Testing": [
-            { "name": "Software Testing", "level": 90 },
-            { "name": "Web Testing", "level": 85 },
-            { "name": "API Testing", "level": 85 },
-            { "name": "Mobile App Testing", "level": 80 },
-            { "name": "Manual Testing", "level": 80 },
-            { "name": "Regression Testing", "level": 85 },
-            { "name": "Integration Testing", "level": 80 },
-            { "name": "Sanity Testing", "level": 80 }
+            {
+              "name": "Software Testing",
+              "level": 90
+            },
+            {
+              "name": "Web Testing",
+              "level": 85
+            },
+            {
+              "name": "API Testing",
+              "level": 85
+            },
+            {
+              "name": "Mobile App Testing",
+              "level": 80
+            },
+            {
+              "name": "Manual Testing",
+              "level": 80
+            },
+            {
+              "name": "Regression Testing",
+              "level": 85
+            },
+            {
+              "name": "Integration Testing",
+              "level": 80
+            },
+            {
+              "name": "Sanity Testing",
+              "level": 80
+            }
           ],
           "Tools": [
-            { "name": "Jira", "level": 85 },
-            { "name": "Postman API", "level": 80 },
-            { "name": "Android Studio", "level": 75 },
-            { "name": "Microsoft Office", "level": 80 },
-            { "name": "Microsoft Excel", "level": 80 }
+            {
+              "name": "Jira",
+              "level": 85
+            },
+            {
+              "name": "Postman API",
+              "level": 80
+            },
+            {
+              "name": "Android Studio",
+              "level": 75
+            },
+            {
+              "name": "Microsoft Office",
+              "level": 80
+            },
+            {
+              "name": "Microsoft Excel",
+              "level": 80
+            }
           ],
           "Methodologies": [
-            { "name": "SDLC", "level": 85 },
-            { "name": "Test Planning", "level": 80 },
-            { "name": "Test Cases", "level": 80 }
+            {
+              "name": "SDLC",
+              "level": 85
+            },
+            {
+              "name": "Test Planning",
+              "level": 80
+            },
+            {
+              "name": "Test Cases",
+              "level": 80
+            }
           ]
         },
         "socialLinks": [
@@ -1153,55 +1513,55 @@
             "link": "https://uat.sscbpl.com/totalview/#/login"
           },
           {
-            "name":"DRM",
-            "date":"June 2023 - present",
-            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
-            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"drm.png",
-            "link":"https://uat.sscbpl.com/drm/#/login"
+            "name": "DRM",
+            "date": "June 2023 - present",
+            "description": "Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "drm.png",
+            "link": "https://uat.sscbpl.com/drm/#/login"
           },
           {
             "name": "Task Management System",
             "date": "2024-01-01 - present",
             "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"task-management.png",
-            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
+            "image": "task-management.png",
+            "link": "https://uat.sscbpl.com/taskmanagement/#/login"
           }
         ]
       },
       "projects": [
-          {
-            "name": "AP FIBER (Live Web Application)",
-            "date": "December 2022 - Present",
-            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
-            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image": "apsfl.png",
-            "link": "https://apsfl.in/about.php"
-          },
-          {
-            "name": "TOTAL VIEW",
-            "date": "June 2023 - present",
-            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
-            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image": "total-view.png",
-            "link": "https://uat.sscbpl.com/totalview/#/login"
-          },
-          {
-            "name":"DRM",
-            "date":"June 2023 - present",
-            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
-            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"drm.png",
-            "link":"https://uat.sscbpl.com/drm/#/login"
-          },
-          {
-            "name": "Task Management System",
-            "date": "2024-01-01 - present",
-            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
-            "image":"task-management.png",
-            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
-          }
-        ],
+        {
+          "name": "AP FIBER (Live Web Application)",
+          "date": "December 2022 - Present",
+          "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "apsfl.png",
+          "link": "https://apsfl.in/about.php"
+        },
+        {
+          "name": "TOTAL VIEW",
+          "date": "June 2023 - present",
+          "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "total-view.png",
+          "link": "https://uat.sscbpl.com/totalview/#/login"
+        },
+        {
+          "name": "DRM",
+          "date": "June 2023 - present",
+          "description": "Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "drm.png",
+          "link": "https://uat.sscbpl.com/drm/#/login"
+        },
+        {
+          "name": "Task Management System",
+          "date": "2024-01-01 - present",
+          "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+          "image": "task-management.png",
+          "link": "https://uat.sscbpl.com/taskmanagement/#/login"
+        }
+      ],
       "site": {
         "title": "Software Test Engineer Portfolio",
         "introduction": "Welcome to my portfolio website, where I showcase my expertise in software testing and quality assurance. Built with attention to detail and a focus on delivering high-quality software solutions.",

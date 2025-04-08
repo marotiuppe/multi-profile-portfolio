@@ -39,7 +39,7 @@ const VisitStats = () => {
       <Card.Body>
         <Row>
           <Col>
-            <h5 className="stats-title">Profile Visits</h5>
+            <h5 className="stats-title">Site Visits</h5>
             <div className="stats-value">{visitCount}</div>
           </Col>
         </Row>

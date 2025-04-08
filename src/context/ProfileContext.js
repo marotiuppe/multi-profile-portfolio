@@ -11,6 +11,7 @@ export const ProfileProvider = ({ children }) => {
   const [currentProfile, setCurrentProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [updateStatus, setUpdateStatus] = useState({ success: false, message: '' });
 
   useEffect(() => {
     setLoading(true);
@@ -24,11 +25,63 @@ export const ProfileProvider = ({ children }) => {
     setLoading(false);
   }, [profileId]);
 
+  const updateProfile = async (updatedData) => {
+    if (!currentProfile || !profileId) return;
+    
+    try {
+      setUpdateStatus({ success: false, message: 'Updating profile...' });
+      
+      // Create a deep copy of the current profile
+      const updatedProfile = JSON.parse(JSON.stringify(currentProfile));
+      
+      // Update the specific fields
+      if (updatedData.personalInfo) {
+        updatedProfile.personalInfo = {
+          ...updatedProfile.personalInfo,
+          ...updatedData.personalInfo
+        };
+      }
+      
+      if (updatedData.socialLinks) {
+        updatedProfile.socialLinks = updatedData.socialLinks;
+      }
+      
+      // Update the state immediately for a responsive UI
+      setCurrentProfile(updatedProfile);
+      
+      // Send the update to the server
+      const response = await fetch(`http://localhost:5000/api/profiles/${profileId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedData),
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        setUpdateStatus({ success: true, message: 'Profile updated successfully' });
+      } else {
+        setUpdateStatus({ success: false, message: result.error || 'Failed to update profile' });
+        // Revert the state if the update failed
+        setCurrentProfile(currentProfile);
+      }
+    } catch (error) {
+      console.error('Error updating profile:', error);
+      setUpdateStatus({ success: false, message: 'Error updating profile' });
+      // Revert the state if the update failed
+      setCurrentProfile(currentProfile);
+    }
+  };
+
   const value = {
     currentProfile,
     loading,
     error,
-    profileId
+    profileId,
+    updateProfile,
+    updateStatus
   };
 
   return (
