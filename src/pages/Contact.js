@@ -4,6 +4,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram,
 import emailjs from '@emailjs/browser';
 import './PageStyles.css';
 import './Contact.css';
+import { useProfile } from '../context/ProfileContext';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,9 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+
+  const { currentProfile } = useProfile();
+  const { personalInfo } = currentProfile;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,7 +74,7 @@ const Contact = () => {
           </Row>
           
           <Row>
-            <Col lg={5} className="mb-4 mb-lg-0">
+            <Col lg={currentProfile.personalInfo.initials === "MU" ? 5 : 12} className="mb-4 mb-lg-0">
               <Card className="contact-info-card h-100">
                 <Card.Body>
                   <h3 className="mb-4">Get In Touch</h3>
@@ -79,7 +83,7 @@ const Contact = () => {
                     <FaEnvelope className="contact-icon" />
                     <div>
                       <h5>Email</h5>
-                      <p><a href="mailto:marotiuppe891@gmail.com">marotiuppe891@gmail.com</a></p>
+                      <p><a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a></p>
                     </div>
                   </div>
                   
@@ -87,7 +91,7 @@ const Contact = () => {
                     <FaPhone className="contact-icon" />
                     <div>
                       <h5>Phone</h5>
-                      <p><a href="tel:+919867205329">+91 9867205329</a></p>
+                      <p><a href={`tel:${personalInfo.phone}`}>{personalInfo.phone}</a></p>
                     </div>
                   </div>
                   
@@ -95,118 +99,114 @@ const Contact = () => {
                     <FaMapMarkerAlt className="contact-icon" />
                     <div>
                       <h5>Location</h5>
-                      <p>Hyderabad, Telangana, India</p>
+                      <p>{personalInfo.location}</p>
                     </div>
                   </div>
                   
                   <div className="social-links mt-4">
                     <h5 className="mb-3">Connect With Me</h5>
                     <div className="d-flex">
-                      <a href="https://www.linkedin.com/in/maroti-u-448324199/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                        <FaLinkedin />
-                      </a>
-                      <a href="https://github.com/marotiuppe" target="_blank" rel="noopener noreferrer" className="social-icon">
-                        <FaGithub />
-                      </a>
-                      <a href="https://www.instagram.com/maroti_uppe/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                        <FaInstagram />
-                      </a>
-                      <a href="https://www.facebook.com/maroti.uppe" target="_blank" rel="noopener noreferrer" className="social-icon">
-                        <FaFacebook />
-                      </a>
-                      <a href="https://wa.me/message/55WZCOBNHZHNN1" target="_blank" rel="noopener noreferrer" className="social-icon">
-                        <FaWhatsapp />
-                      </a>
+                      {currentProfile.socialLinks.map((link, index) => (
+                        <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="social-icon">
+                          {link.type === 'linkedin' && <FaLinkedin />}
+                          {link.type === 'github' && <FaGithub />}
+                          {link.type === 'instagram' && <FaInstagram />}
+                          {link.type === 'facebook' && <FaFacebook />}
+                          {link.type === 'whatsapp' && <FaWhatsapp />}
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </Card.Body>
               </Card>
             </Col>
             
-            <Col lg={7}>
-              <Card className="contact-form-card h-100">
-                <Card.Body>
-                  <h3 className="mb-4">Send Me a Message</h3>
-                  
-                  {submitStatus === 'success' && (
-                    <div className="alert alert-success" role="alert">
-                      Thank you for your message! I'll get back to you as soon as possible.
-                    </div>
-                  )}
-                  
-                  {submitStatus === 'error' && (
-                    <div className="alert alert-danger" role="alert">
-                      There was an error sending your message. Please try again later.
-                    </div>
-                  )}
-                  
-                  <Form onSubmit={handleSubmit}>
-                    <Row>
-                      <Col md={6}>
-                        <Form.Group className="mb-3">
-                          <Form.Label>Your Name</Form.Label>
-                          <Form.Control
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            placeholder="John Doe"
-                          />
-                        </Form.Group>
-                      </Col>
-                      <Col md={6}>
-                        <Form.Group className="mb-3">
-                          <Form.Label>Your Email</Form.Label>
-                          <Form.Control
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            placeholder="john@example.com"
-                          />
-                        </Form.Group>
-                      </Col>
-                    </Row>
+            {currentProfile.personalInfo.initials === "MU" && (
+              <Col lg={7}>
+                <Card className="contact-form-card h-100">
+                  <Card.Body>
+                    <h3 className="mb-4">Send Me a Message</h3>
                     
-                    <Form.Group className="mb-3">
-                      <Form.Label>Subject</Form.Label>
-                      <Form.Control
-                        type="text"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        placeholder="How can I help you?"
-                      />
-                    </Form.Group>
+                    {submitStatus === 'success' && (
+                      <div className="alert alert-success" role="alert">
+                        Thank you for your message! I'll get back to you as soon as possible.
+                      </div>
+                    )}
                     
-                    <Form.Group className="mb-4">
-                      <Form.Label>Message</Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={5}
-                        placeholder="Your message here..."
-                      />
-                    </Form.Group>
+                    {submitStatus === 'error' && (
+                      <div className="alert alert-danger" role="alert">
+                        There was an error sending your message. Please try again later.
+                      </div>
+                    )}
                     
-                    <Button 
-                      variant="primary" 
-                      type="submit" 
-                      className="submit-btn"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </Button>
-                  </Form>
-                </Card.Body>
-              </Card>
-            </Col>
+                    <Form onSubmit={handleSubmit}>
+                      <Row>
+                        <Col md={6}>
+                          <Form.Group className="mb-3">
+                            <Form.Label>Your Name</Form.Label>
+                            <Form.Control
+                              type="text"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleChange}
+                              required
+                              placeholder="John Doe"
+                            />
+                          </Form.Group>
+                        </Col>
+                        <Col md={6}>
+                          <Form.Group className="mb-3">
+                            <Form.Label>Your Email</Form.Label>
+                            <Form.Control
+                              type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              required
+                              placeholder="john@example.com"
+                            />
+                          </Form.Group>
+                        </Col>
+                      </Row>
+                      
+                      <Form.Group className="mb-3">
+                        <Form.Label>Subject</Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          required
+                          placeholder="How can I help you?"
+                        />
+                      </Form.Group>
+                      
+                      <Form.Group className="mb-4">
+                        <Form.Label>Message</Form.Label>
+                        <Form.Control
+                          as="textarea"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                          rows={5}
+                          placeholder="Your message here..."
+                        />
+                      </Form.Group>
+                      
+                      <Button 
+                        variant="primary" 
+                        type="submit" 
+                        className="submit-btn"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                      </Button>
+                    </Form>
+                  </Card.Body>
+                </Card>
+              </Col>
+            )}
           </Row>
         </Container>
       </div>

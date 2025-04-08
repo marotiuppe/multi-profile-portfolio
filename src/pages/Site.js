@@ -2,6 +2,7 @@ import React from "react";
 import "./PageStyles.css";
 import { useProfile } from "../context/ProfileContext";
 import { Navigate } from "react-router-dom";
+import VisitStats from "../components/VisitStats";
 
 const Site = () => {
   const { currentProfile, loading, error } = useProfile();
@@ -19,6 +20,7 @@ const Site = () => {
       <div className="page-container">
         <h1 className="page-title">{site.title}</h1>
         <div className="page-content">
+          <VisitStats />
           <p>{site.introduction}</p>
 
           <h2>{site.technicalStack.title}</h2>

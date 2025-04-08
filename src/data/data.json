@@ -51,7 +51,6 @@
       "navigation": {
         "brandName": "MAROTI UPPE",
         "links": [
-          { "path": "/maroti", "label": "HOME" },
           { "path": "/maroti/about", "label": "ABOUT" },
           { "path": "/maroti/resume", "label": "RESUME" },
           { "path": "/maroti/projects", "label": "PROJECTS" },
@@ -350,7 +349,6 @@
       "navigation": {
         "brandName": "KAPIL JADHAV",
         "links": [
-          { "path": "/kapil", "label": "HOME" },
           { "path": "/kapil/about", "label": "ABOUT" },
           { "path": "/kapil/resume", "label": "RESUME" },
           { "path": "/kapil/projects", "label": "PROJECTS" },
@@ -604,7 +602,6 @@
       "navigation": {
         "brandName": "SHUBHAM PAWAR",
         "links": [
-          { "path": "/shubham", "label": "HOME" },
           { "path": "/shubham/about", "label": "ABOUT" },
           { "path": "/shubham/resume", "label": "RESUME" },
           { "path": "/shubham/projects", "label": "PROJECTS" },
@@ -784,6 +781,479 @@
           }
         }
       }
+    },
+    "manoj": {
+      "status": "active",
+      "personalInfo": {
+        "fullName": "Manoj Kumar",
+        "email": "manojvodnala7@gmail.com",
+        "phone": "8341728992",
+        "location": "Hyderabad, Telangana, India",
+        "profileImageName": "manoj-profile.jpeg",
+        "initials": "MK",
+        "positionTitle": "Software Test Engineer",
+        "tagline": "Compatibility Testing | Sanity Testing | Regression Testing",
+        "about": "Having 3.4 years of experience as a software Test Engineer in manual and automation. Looking for a better opportunity where I can prove my automation skills.",
+        "summary": "Software Test Engineer with 3 years 4 months of experience in manual and automation testing. Proficient in various testing methodologies and tools.",
+        "experienceStartDate": "2021-11-01",
+        "personalBackground": "I am from Hyderabad, India, with a background in Electronics and Telecommunication Engineering. I have a strong foundation in software testing and a passion for ensuring software quality.",
+        "history": [
+          "Started my professional journey in 2021 at Corpus Enterprises as a Software Test Engineer.",
+          "Performed mobile application testing (Android & iOS), web application testing, and TV application testing.",
+          "Focused on providing services like Live TV, VOD & others in a single app, transforming normal TVs into Smart TVs."
+        ],
+        "technicalExpertise": {
+          "Testing": "Software Testing, Web Testing, Test Execution, API Testing, Mobile App Testing, Manual Testing, Regression Testing, Integration Testing, Sanity Testing",
+          "Tools": "Jira, Postman API, Android Studio, Microsoft Office, Microsoft Excel",
+          "Methodologies": "Software Development Life Cycle (SDLC), Test Planning, Test Cases"
+        },
+        "currentFocus": [
+          "Understanding project requirements and following STLC & SDLC.",
+          "Test planning, test case design, and execution.",
+          "Performing UI, functional, and cross-browser compatibility testing."
+        ],
+        "dreams": [
+          "Mastering advanced testing methodologies and tools.",
+          "Contributing to innovative software testing solutions.",
+          "Expanding knowledge in automation testing and quality assurance.",
+          "Growing as a technical leader in the software testing industry."
+        ],
+        "funFacts": [
+          "I enjoy solving complex testing challenges.",
+          "I've contributed to open-source testing projects.",
+          "I can debug test cases while drinking coffee, simultaneously."
+        ]
+      },
+      "navigation": {
+        "brandName": "MANOJ KUMAR",
+        "links": [
+          { "path": "/manoj/about", "label": "ABOUT" },
+          { "path": "/manoj/resume", "label": "RESUME" },
+          { "path": "/manoj/projects", "label": "PROJECTS" },
+          { "path": "/manoj/contact", "label": "CONTACT" }
+        ]
+      },
+      "socialLinks": [
+        {
+          "type": "linkedin",
+          "url": "https://linkedin.com/in/manoj-vodnala-7374361a0",
+          "label": "LinkedIn"
+        }
+      ],
+      "resume": {
+        "experiences": [
+          {
+            "company": "Corpus Enterprises",
+            "startDate": "2021-11-01",
+            "endDate": "present",
+            "position": "Software Test Engineer",
+            "location": "Hyderabad, Telangana, India",
+            "workType": "On-site",
+            "technologies": "Mobile application testing, Web application testing, TV application testing, API Testing, Regression Testing, Integration Testing"
+          }
+        ],
+        "education": [
+          {
+            "degree": "B.Tech/B.E. - Electronics/Telecommunication",
+            "school": "Malla Reddy Institute of Management & Technology",
+            "startDate": "2014-01-01",
+            "endDate": "2018-12-31",
+            "grade": "Grade: 75%",
+            "location": "Secunderabad"
+          },
+          {
+            "degree": "12th",
+            "school": "Andhra Pradesh",
+            "startDate": "2012-01-01",
+            "endDate": "2014-12-31",
+            "grade": "Grade: 80-84.9%",
+            "location": "Andhra Pradesh, English"
+          },
+          {
+            "degree": "10th",
+            "school": "Andhra Pradesh",
+            "startDate": "2010-01-01",
+            "endDate": "2012-12-31",
+            "grade": "Grade: 85-89.9%",
+            "location": "Andhra Pradesh, English"
+          }
+        ],
+        "projects": [
+          {
+            "name": "AP FIBER (Live Web Application)",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "apsfl.png",
+            "link": "https://apsfl.in/about.php"
+          },
+          {
+            "name": "TOTAL VIEW",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "total-view.png",
+            "link": "https://uat.sscbpl.com/totalview/#/login"
+          },
+          {
+            "name":"DRM",
+            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"drm.png",
+            "link":"https://uat.sscbpl.com/drm/#/login"
+          },
+          {
+            "name": "Task Management System",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"task-management.png",
+            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
+          }
+        ],
+        "skills": {
+          "Testing": [
+            { "name": "Software Testing", "level": 90 },
+            { "name": "Web Testing", "level": 85 },
+            { "name": "API Testing", "level": 85 },
+            { "name": "Mobile App Testing", "level": 80 },
+            { "name": "Manual Testing", "level": 80 },
+            { "name": "Regression Testing", "level": 85 },
+            { "name": "Integration Testing", "level": 80 },
+            { "name": "Sanity Testing", "level": 80 }
+          ],
+          "Tools": [
+            { "name": "Jira", "level": 85 },
+            { "name": "Postman API", "level": 80 },
+            { "name": "Android Studio", "level": 75 },
+            { "name": "Microsoft Office", "level": 80 },
+            { "name": "Microsoft Excel", "level": 80 }
+          ],
+          "Methodologies": [
+            { "name": "SDLC", "level": 85 },
+            { "name": "Test Planning", "level": 80 },
+            { "name": "Test Cases", "level": 80 }
+          ]
+        },
+        "socialLinks": [
+          {
+            "type": "linkedin",
+            "url": "https://linkedin.com/in/manoj-vodnala-7374361a0",
+            "label": "LinkedIn"
+          }
+        ]
+      },
+      "projects": [
+          {
+            "name": "AP FIBER (Live Web Application)",
+            "date": "December 2022 - Present",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "apsfl.png",
+            "link": "https://apsfl.in/about.php"
+          },
+          {
+            "name": "TOTAL VIEW",
+            "date": "June 2023 - present",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "total-view.png",
+            "link": "https://uat.sscbpl.com/totalview/#/login"
+          },
+          {
+            "name":"DRM",
+            "date":"June 2023 - present",
+            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"drm.png",
+            "link":"https://uat.sscbpl.com/drm/#/login"
+          },
+          {
+            "name": "Task Management System",
+            "date": "2024-01-01 - present",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"task-management.png",
+            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
+          }
+        ],
+      "site": {
+        "title": "Software Test Engineer Portfolio",
+        "introduction": "Welcome to my portfolio website, where I showcase my expertise in software testing and quality assurance. Built with attention to detail and a focus on delivering high-quality software solutions.",
+        "technicalStack": {
+          "title": "Testing Tools and Technologies",
+          "description": "Leveraging modern testing tools and methodologies:",
+          "technologies": [
+            {
+              "name": "Selenium",
+              "description": "Automating web application testing with robust test scripts"
+            },
+            {
+              "name": "JIRA",
+              "description": "Managing test cases and tracking bugs efficiently"
+            },
+            {
+              "name": "Postman",
+              "description": "Testing APIs with ease and precision"
+            },
+            {
+              "name": "TestNG",
+              "description": "Organizing and executing test cases with advanced features"
+            },
+            {
+              "name": "Jenkins",
+              "description": "Continuous integration and delivery for automated testing"
+            }
+          ]
+        },
+        "developmentApproach": {
+          "title": "Testing Process",
+          "description": "Ensuring software quality through rigorous testing practices:",
+          "practices": [
+            "Comprehensive test planning and case design",
+            "Automated and manual testing for thorough coverage",
+            "Performance and load testing for optimal application behavior",
+            "Regression testing to ensure stability after changes",
+            "Detailed test reporting and documentation"
+          ]
+        },
+        "deployment": {
+          "title": "Testing Environment",
+          "description": "Utilizing a robust testing environment to ensure software reliability and performance."
+        },
+        "footer": {
+          "text": "Thank you for visiting my portfolio. Feel free to explore my projects and reach out for collaboration opportunities.",
+          "sourceCode": {
+            "text": "Explore the code",
+            "url": "https://github.com/shubham-pawar/portfolio"
+          }
+        }
+      }
+    },
+    "satya": {
+      "status": "active",
+      "personalInfo": {
+        "fullName": "Annamreddy Satyaprakash",
+        "email": "annamreddysatyaprakash@gmail.com",
+        "phone": "8220570107",
+        "location": "Hyderabad, Telangana, India",
+        "profileImageName": "satya-profile.jpg",
+        "initials": "AS",
+        "positionTitle": "Software Test Engineer",
+        "tagline": "Compatibility Testing | Sanity Testing | Regression Testing",
+        "about": "Having 3.4 years of experience as a software Test Engineer in manual and automation. Looking for a better opportunity where I can prove my automation skills.",
+        "summary": "Software Test Engineer with 3 years 4 months of experience in manual and automation testing. Proficient in various testing methodologies and tools.",
+        "experienceStartDate": "2021-11-01",
+        "personalBackground": "I am from Hyderabad, India, with a background in Electronics and Telecommunication Engineering. I have a strong foundation in software testing and a passion for ensuring software quality.",
+        "history": [
+          "Started my professional journey in 2021 at Corpus Enterprises as a Software Test Engineer.",
+          "Performed mobile application testing (Android & iOS), web application testing, and TV application testing.",
+          "Focused on providing services like Live TV, VOD & others in a single app, transforming normal TVs into Smart TVs."
+        ],
+        "technicalExpertise": {
+          "Testing": "Software Testing, Web Testing, Test Execution, API Testing, Mobile App Testing, Manual Testing, Regression Testing, Integration Testing, Sanity Testing",
+          "Tools": "Jira, Postman API, Android Studio, Microsoft Office, Microsoft Excel",
+          "Methodologies": "Software Development Life Cycle (SDLC), Test Planning, Test Cases"
+        },
+        "currentFocus": [
+          "Understanding project requirements and following STLC & SDLC.",
+          "Test planning, test case design, and execution.",
+          "Performing UI, functional, and cross-browser compatibility testing."
+        ],
+        "dreams": [
+          "Mastering advanced testing methodologies and tools.",
+          "Contributing to innovative software testing solutions.",
+          "Expanding knowledge in automation testing and quality assurance.",
+          "Growing as a technical leader in the software testing industry."
+        ],
+        "funFacts": [
+          "I enjoy solving complex testing challenges.",
+          "I've contributed to open-source testing projects.",
+          "I can debug test cases while drinking coffee, simultaneously."
+        ]
+      },
+      "navigation": {
+        "brandName": "SATYAPRAKASH",
+        "links": [
+          { "path": "/satya/about", "label": "ABOUT" },
+          { "path": "/satya/resume", "label": "RESUME" },
+          { "path": "/satya/projects", "label": "PROJECTS" },
+          { "path": "/satya/contact", "label": "CONTACT" }
+        ]
+      },
+      "socialLinks": [
+        {
+          "type": "linkedin",
+          "url": "linkedin.com/in/satya-prakash-annamreddy-65a98b179",
+          "label": "LinkedIn"
+        }
+      ],
+      "resume": {
+        "experiences": [
+          {
+            "company": "Corpus Enterprises",
+            "startDate": "2021-11-01",
+            "endDate": "present",
+            "position": "Software Test Engineer",
+            "location": "Hyderabad, Telangana, India",
+            "workType": "On-site",
+            "technologies": "Mobile application testing, Web application testing, TV application testing, API Testing, Regression Testing, Integration Testing"
+          }
+        ],
+        "education": [
+          {
+            "degree": "Bachelor of Technology - BTech, Civil Engineering",
+            "school": "Karunya Institute of Technology and Sciences",
+            "startDate": "2016-01-01",
+            "endDate": "2020-12-31",
+            "location": "Coimbatore"
+          }
+        ],
+        "skills": {
+          "Testing": [
+            { "name": "Software Testing", "level": 90 },
+            { "name": "Web Testing", "level": 85 },
+            { "name": "API Testing", "level": 85 },
+            { "name": "Mobile App Testing", "level": 80 },
+            { "name": "Manual Testing", "level": 80 },
+            { "name": "Regression Testing", "level": 85 },
+            { "name": "Integration Testing", "level": 80 },
+            { "name": "Sanity Testing", "level": 80 }
+          ],
+          "Tools": [
+            { "name": "Jira", "level": 85 },
+            { "name": "Postman API", "level": 80 },
+            { "name": "Android Studio", "level": 75 },
+            { "name": "Microsoft Office", "level": 80 },
+            { "name": "Microsoft Excel", "level": 80 }
+          ],
+          "Methodologies": [
+            { "name": "SDLC", "level": 85 },
+            { "name": "Test Planning", "level": 80 },
+            { "name": "Test Cases", "level": 80 }
+          ]
+        },
+        "socialLinks": [
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/satya-prakash-annamreddy-65a98b179",
+            "icon": "fab fa-linkedin"
+          }
+        ],
+        "projects": [
+          {
+            "name": "AP FIBER (Live Web Application)",
+            "date": "December 2022 - Present",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "apsfl.png",
+            "link": "https://apsfl.in/about.php"
+          },
+          {
+            "name": "TOTAL VIEW",
+            "date": "June 2023 - present",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "total-view.png",
+            "link": "https://uat.sscbpl.com/totalview/#/login"
+          },
+          {
+            "name":"DRM",
+            "date":"June 2023 - present",
+            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"drm.png",
+            "link":"https://uat.sscbpl.com/drm/#/login"
+          },
+          {
+            "name": "Task Management System",
+            "date": "2024-01-01 - present",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"task-management.png",
+            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
+          }
+        ]
+      },
+      "projects": [
+          {
+            "name": "AP FIBER (Live Web Application)",
+            "date": "December 2022 - Present",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "apsfl.png",
+            "link": "https://apsfl.in/about.php"
+          },
+          {
+            "name": "TOTAL VIEW",
+            "date": "June 2023 - present",
+            "description": "A comprehensive Subscriber Management System for cable operators with features for subscriber onboarding, package management, and billing. Handles 100,000+ subscribers with integrated payment gateways and analytics dashboard for business insights.",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image": "total-view.png",
+            "link": "https://uat.sscbpl.com/totalview/#/login"
+          },
+          {
+            "name":"DRM",
+            "date":"June 2023 - present",
+            "description":"Digital Rights Management platform securing content distribution for cable operators. Provides content encryption, license management, and real-time usage monitoring while ensuring industry compliance.",
+            "technologies":"Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"drm.png",
+            "link":"https://uat.sscbpl.com/drm/#/login"
+          },
+          {
+            "name": "Task Management System",
+            "date": "2024-01-01 - present",
+            "technologies": "Selenium, JIRA, Postman, TestNG, Jenkins",
+            "image":"task-management.png",
+            "link":"https://uat.sscbpl.com/taskmanagement/#/login"
+          }
+        ],
+      "site": {
+        "title": "Software Test Engineer Portfolio",
+        "introduction": "Welcome to my portfolio website, where I showcase my expertise in software testing and quality assurance. Built with attention to detail and a focus on delivering high-quality software solutions.",
+        "technicalStack": {
+          "title": "Testing Tools and Technologies",
+          "description": "Leveraging modern testing tools and methodologies:",
+          "technologies": [
+            {
+              "name": "Selenium",
+              "description": "Automating web application testing with robust test scripts"
+            },
+            {
+              "name": "JIRA",
+              "description": "Managing test cases and tracking bugs efficiently"
+            },
+            {
+              "name": "Postman",
+              "description": "Testing APIs with ease and precision"
+            },
+            {
+              "name": "TestNG",
+              "description": "Organizing and executing test cases with advanced features"
+            },
+            {
+              "name": "Jenkins",
+              "description": "Continuous integration and delivery for automated testing"
+            }
+          ]
+        },
+        "developmentApproach": {
+          "title": "Testing Process",
+          "description": "Ensuring software quality through rigorous testing practices:",
+          "practices": [
+            "Comprehensive test planning and case design",
+            "Automated and manual testing for thorough coverage",
+            "Performance and load testing for optimal application behavior",
+            "Regression testing to ensure stability after changes",
+            "Detailed test reporting and documentation"
+          ]
+        },
+        "deployment": {
+          "title": "Testing Environment",
+          "description": "Utilizing a robust testing environment to ensure software reliability and performance."
+        },
+        "footer": {
+          "text": "Thank you for visiting my portfolio. Feel free to explore my projects and reach out for collaboration opportunities.",
+          "sourceCode": {
+            "text": "Explore the code",
+            "url": "https://github.com/shubham-pawar/portfolio"
+          }
+        }
+      }
     }
   }
-} 
+}

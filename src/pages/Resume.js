@@ -25,7 +25,7 @@ const Resume = () => {
   const resumeRef = useRef(null);
   // Get the profile data from ProfileContext
   const { currentProfile } = useProfile();
-  const { personalInfo, resume } = currentProfile;
+  const { personalInfo = {}, resume = {} } = currentProfile || {};
   const { experiences, projects, education, skills, socialLinks } = resume;
 
   const downloadPDF = () => {
@@ -72,19 +72,21 @@ const Resume = () => {
               <p><i className="fas fa-phone"></i> {personalInfo.phone}</p>
               <p><i className="fas fa-map-marker-alt"></i> {personalInfo.location}</p>
             </div>
-            <div className="social-links">
-              {socialLinks.map((link, index) => (
-                <a 
-                  key={index} 
-                  href={link.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  title={link.name}
-                >
-                  <i className={link.icon}></i>
-                </a>
-              ))}
-            </div>
+            {socialLinks && socialLinks.length > 0 && (
+              <div className="social-links">
+                {socialLinks.map((link, index) => (
+                  <a 
+                    key={index} 
+                    href={link.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title={link.name}
+                  >
+                    <i className={link.icon}></i>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
           
           <div className="main-content">
@@ -100,48 +102,57 @@ const Resume = () => {
 
         <div className="horizontal-divider"></div>
 
-        <div className="resume-section">
-          <h2 className="section-title">Experience</h2>
-          {experiences.map((exp, index) => (
-            <div key={index} className="experience-item">
-              <div className="experience-header">
-                <span className="company-name">{exp.company}</span>
-                <div className="date-range">
-                  {new Date(exp.startDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })} - {
-                    exp.endDate === 'present' ? 'Present' : new Date(exp.endDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-                  } · {calculateDuration(exp.startDate, exp.endDate)}
+        {experiences && experiences.length > 0 && (
+          <div className="resume-section">
+            <h2 className="section-title">Experience</h2>
+            {experiences.map((exp, index) => (
+              <div key={index} className="experience-item">
+                <div className="experience-header">
+                  <span className="company-name">{exp.company}</span>
+                  <div className="date-range">
+                    {new Date(exp.startDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })} - {
+                      exp.endDate === 'present' ? 'Present' : new Date(exp.endDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+                    } · {calculateDuration(exp.startDate, exp.endDate)}
+                  </div>
                 </div>
+                <div className="position-title">{exp.position}</div>
+                <div className="location">{exp.location} · {exp.workType}</div>
+                <p className="technologies">Technologies: {exp.technologies}</p>
               </div>
-              <div className="position-title">{exp.position}</div>
-              <div className="location">{exp.location} · {exp.workType}</div>
-              <p className="technologies">Technologies: {exp.technologies}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
         
         <div className="horizontal-divider"></div>
 
-        <div className="resume-section">
-          <h2 className="section-title">Projects</h2>
+        {projects && projects.length > 0 && (
+          <div className="resume-section">
+            <h2 className="section-title">Projects</h2>
           {projects.map((project, index) => (
             <div key={index} className="project-item">
               <div className="project-header">
                 <h3 className="project-name">{project.name}</h3>
                 <div className="project-duration">
-                  {new Date(project.startDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })} - {
-                    project.endDate === 'present' ? 'Present' : new Date(project.endDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-                  } · {calculateDuration(project.startDate, project.endDate)}
+                  {project.startDate && project.endDate && (
+                    <>
+                      {new Date(project.startDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })} - {
+                        project.endDate === 'present' ? 'Present' : new Date(project.endDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+                      } · {calculateDuration(project.startDate, project.endDate)}
+                    </>
+                  )}
                 </div>
               </div>
               <p className="technologies">{project.technologies}</p>
             </div>
-          ))}
-        </div>
-
+            ))}
+          </div>
+        )}
+    
         <div className="horizontal-divider"></div>
 
-        <div className="resume-section">
-          <h2 className="section-title">Education</h2>
+        {education && education.length > 0 && (
+          <div className="resume-section">
+            <h2 className="section-title">Education</h2>
           {education.map((edu, index) => (
             <div key={index} className="education-item">
               <div className="degree">{edu.degree}</div>
@@ -156,13 +167,15 @@ const Resume = () => {
                 <div className="location">{edu.location}</div>
               </div>
             </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         <div className="horizontal-divider"></div>
 
-        <div className="skills-section">
-          <h2 className="section-title">Skills</h2>
+        {skills && Object.keys(skills).length > 0 && (
+          <div className="skills-section">
+            <h2 className="section-title">Skills</h2>
           {Object.entries(skills).map(([category, items]) => (
             <div key={category} className="skill-category">
               <h3 className="skill-title">{category}</h3>
@@ -180,8 +193,9 @@ const Resume = () => {
                 ))}
               </div>
             </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
