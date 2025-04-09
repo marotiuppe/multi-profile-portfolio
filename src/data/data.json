@@ -2,7 +2,7 @@
   "profiles": {
     "maroti": {
       "status": "active",
-      "password": "maroti123",
+      "password": "maroti@123",
       "personalInfo": {
         "fullName": "Maroti Uppe",
         "email": "marotiuppe891@gmail.com",
@@ -560,6 +560,7 @@
     },
     "kapil": {
       "status": "active",
+      "password": "kapil@123",
       "personalInfo": {
         "fullName": "Kapil Jadhav",
         "email": "kapiljadhav5656@gmail.com",
@@ -898,6 +899,7 @@
     },
     "shubham": {
       "status": "active",
+      "password": "shubham@123",
       "personalInfo": {
         "fullName": "Shubham Pawar",
         "email": "pshubham270@gmail.com",
@@ -1222,6 +1224,7 @@
     },
     "manoj": {
       "status": "active",
+      "password": "manoj@123",
       "personalInfo": {
         "fullName": "Manoj Kumar",
         "email": "manojvodnala7@gmail.com",
@@ -1525,6 +1528,7 @@
     },
     "satya": {
       "status": "active",
+      "password": "satya@123",
       "personalInfo": {
         "fullName": "Annamreddy Satyaprakash",
         "email": "annamreddysatyaprakash@gmail.com",
