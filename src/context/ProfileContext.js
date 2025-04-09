@@ -55,7 +55,7 @@ export const ProfileProvider = ({ children }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(updatedData),
+        body: JSON.stringify({...updatedData,password:localStorage.getItem(`profile_${profileId}_password`)}),
       });
       
       const result = await response.json();

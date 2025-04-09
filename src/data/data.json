@@ -2,9 +2,10 @@
   "profiles": {
     "maroti": {
       "status": "active",
+      "password": "maroti123",
       "personalInfo": {
         "fullName": "Maroti Uppe",
-        "email": "marotiuppe892@gmail.com",
+        "email": "marotiuppe891@gmail.com",
         "phone": "+91 9867205329",
         "location": "Hyderabad, Telangana, India",
         "profileImageName": "maroti-profile.jpg",
@@ -46,6 +47,202 @@
           "I've mentored junior developers and conducted technical training sessions.",
           "I contribute to open-source projects in my free time.",
           "I can debug code while drinking coffee, simultaneously."
+        ],
+        "skills": {
+          "technical": [
+            {
+              "name": "Java",
+              "level": "Expert",
+              "years": 2,
+              "icon": "java.svg"
+            },
+            {
+              "name": "Spring Boot",
+              "level": "Expert",
+              "years": 2,
+              "icon": "spring-boot.svg"
+            },
+            {
+              "name": "Angular",
+              "level": "Expert",
+              "years": 2,
+              "icon": "angular.svg"
+            },
+            {
+              "name": "React",
+              "level": "Intermediate",
+              "years": 1,
+              "icon": "react.svg"
+            },
+            {
+              "name": "TypeScript",
+              "level": "Expert",
+              "years": 2,
+              "icon": "typescript.svg"
+            },
+            {
+              "name": "JavaScript",
+              "level": "Expert",
+              "years": 2,
+              "icon": "javascript.svg"
+            },
+            {
+              "name": "HTML5",
+              "level": "Expert",
+              "years": 2,
+              "icon": "html5.svg"
+            },
+            {
+              "name": "CSS3",
+              "level": "Expert",
+              "years": 2,
+              "icon": "css3.svg"
+            },
+            {
+              "name": "Bootstrap",
+              "level": "Expert",
+              "years": 2,
+              "icon": "bootstrap.svg"
+            },
+            {
+              "name": "MySQL",
+              "level": "Intermediate",
+              "years": 2,
+              "icon": "mysql.svg"
+            },
+            {
+              "name": "Git",
+              "level": "Expert",
+              "years": 2,
+              "icon": "git.svg"
+            },
+            {
+              "name": "Maven",
+              "level": "Expert",
+              "years": 2,
+              "icon": "maven.svg"
+            }
+          ],
+          "soft": [
+            {
+              "name": "Problem Solving",
+              "level": "Expert",
+              "icon": "problem-solving.svg"
+            },
+            {
+              "name": "Team Collaboration",
+              "level": "Expert",
+              "icon": "teamwork.svg"
+            },
+            {
+              "name": "Communication",
+              "level": "Expert",
+              "icon": "communication.svg"
+            },
+            {
+              "name": "Time Management",
+              "level": "Expert",
+              "icon": "time-management.svg"
+            },
+            {
+              "name": "Adaptability",
+              "level": "Expert",
+              "icon": "adaptability.svg"
+            }
+          ]
+        },
+        "projects": [
+          {
+            "title": "Portfolio Website",
+            "description": "A modern, responsive portfolio website built with React and Bootstrap, showcasing my skills and projects.",
+            "technologies": [
+              "React",
+              "Bootstrap",
+              "JavaScript",
+              "HTML",
+              "CSS"
+            ],
+            "image": "portfolio-website.jpg",
+            "link": "https://github.com/marotiuppe/portfolio"
+          },
+          {
+            "title": "E-commerce Platform",
+            "description": "A full-stack e-commerce platform built with Spring Boot and Angular, featuring user authentication, product management, and payment integration.",
+            "technologies": [
+              "Spring Boot",
+              "Angular",
+              "MySQL",
+              "RESTful API"
+            ],
+            "image": "ecommerce-platform.jpg",
+            "link": "https://github.com/marotiuppe/ecommerce"
+          },
+          {
+            "title": "Task Management System",
+            "description": "A task management application built with React and Node.js, allowing users to create, track, and manage their tasks efficiently.",
+            "technologies": [
+              "React",
+              "Node.js",
+              "MongoDB",
+              "Express"
+            ],
+            "image": "task-management.jpg",
+            "link": "https://github.com/marotiuppe/task-manager"
+          }
+        ],
+        "education": [
+          {
+            "degree": "Bachelor of Engineering in Computer Science",
+            "institution": "Mumbai University",
+            "year": "2021",
+            "location": "Mumbai, India"
+          }
+        ],
+        "experience": [
+          {
+            "position": "Software Developer",
+            "company": "Corpus Enterprises Private Limited",
+            "duration": "2022 - Present",
+            "location": "Hyderabad, India",
+            "responsibilities": [
+              "Developing and maintaining enterprise applications using Spring Boot and Angular",
+              "Implementing RESTful APIs and database operations",
+              "Creating responsive user interfaces with Angular and Bootstrap",
+              "Collaborating with team members on code reviews and best practices"
+            ]
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Oracle Certified Professional, Java SE 11 Developer",
+            "issuer": "Oracle",
+            "year": "2022"
+          },
+          {
+            "name": "Angular Developer Certification",
+            "issuer": "Google",
+            "year": "2022"
+          }
+        ],
+        "languages": [
+          {
+            "name": "English",
+            "level": "Professional"
+          },
+          {
+            "name": "Hindi",
+            "level": "Native"
+          },
+          {
+            "name": "Marathi",
+            "level": "Native"
+          }
+        ],
+        "interests": [
+          "Open Source Contribution",
+          "Technical Blogging",
+          "Problem Solving",
+          "Learning New Technologies"
         ]
       },
       "navigation": {
@@ -90,7 +287,7 @@
             "position": "Software Developer",
             "location": "Hyderabad, Telangana, India",
             "workType": "On-site",
-            "technologies": "Angular, React, Spring, Spring boot, Hibernate"
+            "technologies": "Angular, React, Spring, Spring boot, Hibernat"
           },
           {
             "company": "Corpus Enterprises Private Limited",
@@ -958,6 +1155,7 @@
           "date": "January 2023 - Present",
           "description": "A comprehensive health and wellness application that aggregates data from various health apps and devices. The app provides personalized health challenges, habit tracking, and a detailed health journey visualization. Users can monitor their progress, set goals, and receive insights to improve their overall well-being through an intuitive and engaging interface.",
           "technologies": "React Native, JavaScript, TypeScript, Redux, REST API, Firebase",
+          "image": "healthier901.png",
           "link": "https://github.com/shubham-pawar"
         },
         {
@@ -1233,9 +1431,9 @@
         },
         "socialLinks": [
           {
-            "type": "linkedin",
+            "name": "LinkedIn",
             "url": "https://linkedin.com/in/manoj-vodnala-7374361a0",
-            "label": "LinkedIn"
+            "icon": "fab fa-linkedin"
           }
         ]
       },

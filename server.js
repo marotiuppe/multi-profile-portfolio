@@ -18,7 +18,13 @@ const dataFilePath = path.join(__dirname, 'src', 'data', 'data.json');
 app.get('/api/profiles', (req, res) => {
   try {
     const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
-    res.json(data);
+    // Remove passwords from the response
+    const profilesWithoutPasswords = Object.keys(data.profiles).reduce((acc, key) => {
+      const { password, ...profileWithoutPassword } = data.profiles[key];
+      acc[key] = profileWithoutPassword;
+      return acc;
+    }, {});
+    res.json({ profiles: profilesWithoutPasswords });
   } catch (error) {
     console.error('Error reading profiles:', error);
     res.status(500).json({ error: 'Failed to read profiles' });
@@ -32,7 +38,8 @@ app.get('/api/profiles/:profileId', (req, res) => {
     const { profileId } = req.params;
     
     if (data.profiles[profileId]) {
-      res.json(data.profiles[profileId]);
+      const { password, ...profileWithoutPassword } = data.profiles[profileId];
+      res.json(profileWithoutPassword);
     } else {
       res.status(404).json({ error: 'Profile not found' });
     }
@@ -42,11 +49,36 @@ app.get('/api/profiles/:profileId', (req, res) => {
   }
 });
 
+// Validate password for a profile
+app.post('/api/profiles/:profileId/validate-password', (req, res) => {
+  debugger
+  try {
+    const { profileId } = req.params;
+    const { password } = req.body;
+    
+    const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
+    
+    if (!data.profiles[profileId]) {
+      return res.status(404).json({ error: 'Profile not found' });
+    }
+    
+    if (data.profiles[profileId].password !== password) {
+      return res.status(401).json({ error: 'Invalid password' });
+    }
+    localStorage.setItem(`profile_${profileId}_password`, password);
+    res.json({ success: true });
+  } catch (error) {
+    console.error('Error validating password:', error);
+    res.status(500).json({ error: 'Failed to validate password' });
+  }
+});
+
 // Update a profile
 app.put('/api/profiles/:profileId', (req, res) => {
   try {
+    debugger;
     const { profileId } = req.params;
-    const updatedData = req.body;
+    const { password, ...updatedData } = req.body;
     
     // Read the current data
     const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
@@ -56,8 +88,12 @@ app.put('/api/profiles/:profileId', (req, res) => {
       return res.status(404).json({ error: 'Profile not found' });
     }
     
+    // Validate password
+    if (data.profiles[profileId].password !== password) {
+      return res.status(401).json({ error: 'Invalid password' });
+    }
+    
     // Update the profile with the new data
-    // We're only updating specific fields, not replacing the entire profile
     if (updatedData.personalInfo) {
       data.profiles[profileId].personalInfo = {
         ...data.profiles[profileId].personalInfo,
@@ -67,6 +103,17 @@ app.put('/api/profiles/:profileId', (req, res) => {
     
     if (updatedData.socialLinks) {
       data.profiles[profileId].socialLinks = updatedData.socialLinks;
+    }
+    
+    // Handle resume updates
+    if (updatedData.resume) {
+      if (!data.profiles[profileId].resume) {
+        data.profiles[profileId].resume = {};
+      }
+      
+      Object.keys(updatedData.resume).forEach(section => {
+        data.profiles[profileId].resume[section] = updatedData.resume[section];
+      });
     }
     
     // Write the updated data back to the file

@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import { Global, css } from '@emotion/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ProfileProvider } from './context/ProfileContext';
+import { PasswordProvider } from './context/PasswordContext';
 // import data from './data/data.json';
 import NotFound from './pages/NotFound';
 import './App.css';
@@ -55,16 +56,18 @@ function App() {
   // const profileIds = Object.keys(data.profiles);
 
   return (
-    <Router>
-      <Global styles={globalStyles} />
-      <ProfileProvider>
-        <Routes>
-          <Route path="/" element={<Navigate to="/maroti" replace />} />
-          <Route path="/:profileId/*" element={<ProfileLayout />} />
-          <Route path="/404" element={<NotFound />} />
-        </Routes>
-      </ProfileProvider>
-    </Router>
+    <PasswordProvider>
+      <Router>
+        <Global styles={globalStyles} />
+        <ProfileProvider>
+          <Routes>
+            <Route path="/" element={<Navigate to="/maroti" replace />} />
+            <Route path="/:profileId/*" element={<ProfileLayout />} />
+            <Route path="/404" element={<NotFound />} />
+          </Routes>
+        </ProfileProvider>
+      </Router>
+    </PasswordProvider>
   );
 }
 

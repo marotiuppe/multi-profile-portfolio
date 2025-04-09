@@ -14,7 +14,6 @@ const ProfileSection = () => {
     socialLinks: []
   });
   const [statusMessage, setStatusMessage] = useState('');
-  const [editingField, setEditingField] = useState(null);
 
   useEffect(() => {
     if (updateStatus.message) {
@@ -76,12 +75,10 @@ const ProfileSection = () => {
       socialLinks: editedData.socialLinks
     });
     setIsEditing(false);
-    setEditingField(null);
   };
 
   const handleCancelClick = () => {
     setIsEditing(false);
-    setEditingField(null);
   };
 
   const handleInputChange = (e) => {
@@ -121,32 +118,6 @@ const ProfileSection = () => {
     }));
   };
 
-  const handleFieldEdit = (field) => {
-    if (currentProfile) {
-      setEditedData({
-        email: currentProfile.personalInfo.email,
-        phone: currentProfile.personalInfo.phone,
-        about: currentProfile.personalInfo.about,
-        socialLinks: [...currentProfile.socialLinks]
-      });
-      setEditingField(field);
-    }
-  };
-
-  const handleFieldSave = (field) => {
-    updateProfile({
-      personalInfo: {
-        ...currentProfile.personalInfo,
-        [field]: editedData[field]
-      },
-      socialLinks: currentProfile.socialLinks
-    });
-    setEditingField(null);
-  };
-
-  const handleFieldCancel = () => {
-    setEditingField(null);
-  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -272,27 +243,6 @@ const ProfileSection = () => {
             <a href={`mailto:${personalInfo.email}`} className="email">
               {personalInfo.email.toUpperCase()}
             </a>
-            <div className="edit-icon" onClick={() => handleFieldEdit('email')}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-              </svg>
-            </div>
-            {editingField === 'email' && (
-              <div className="inline-edit-field">
-                <input
-                  type="email"
-                  name="email"
-                  value={editedData.email}
-                  onChange={handleInputChange}
-                  autoFocus
-                />
-                <div className="inline-edit-actions">
-                  <button onClick={() => handleFieldSave('email')}>Save</button>
-                  <button onClick={handleFieldCancel}>Cancel</button>
-                </div>
-              </div>
-            )}
           </div>
           
           {personalInfo.phone && (
@@ -300,55 +250,12 @@ const ProfileSection = () => {
               <a href={`tel:${personalInfo.phone}`} className="phone">
                 {personalInfo.phone}
               </a>
-              <div className="edit-icon" onClick={() => handleFieldEdit('phone')}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                </svg>
-              </div>
-              {editingField === 'phone' && (
-                <div className="inline-edit-field">
-                  <input
-                    type="text"
-                    name="phone"
-                    value={editedData.phone}
-                    onChange={handleInputChange}
-                    autoFocus
-                  />
-                  <div className="inline-edit-actions">
-                    <button onClick={() => handleFieldSave('phone')}>Save</button>
-                    <button onClick={handleFieldCancel}>Cancel</button>
-                  </div>
-                </div>
-              )}
             </div>
           )}
           
           <div className="section field-container">
             <h2 className="section-title">About</h2>
             <p className="section-text">{aboutText}</p>
-            <div className="edit-icon" onClick={() => handleFieldEdit('about')}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-              </svg>
-            </div>
-            {editingField === 'about' && (
-              <div className="inline-edit-field about-edit">
-                <textarea style={{width: '100%'}}
-                  name="about"
-                  value={editedData.about}
-                  onChange={handleInputChange}
-                  autoFocus
-                  rows="5"
-                  
-                />
-                <div className="inline-edit-actions">
-                  <button onClick={() => handleFieldSave('about')}>Save</button>
-                  <button onClick={handleFieldCancel}>Cancel</button>
-                </div>
-              </div>
-            )}
           </div>
           
           <div className="social-links">
