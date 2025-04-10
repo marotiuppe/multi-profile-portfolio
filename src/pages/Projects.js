@@ -1,9 +1,37 @@
-import React from "react";
-import { useProfile } from "../context/ProfileContext";
+import React, { useState, useEffect } from "react";
+import { useData } from "../context/dataContext";
+import { useParams } from "react-router-dom";
 import "./Projects.css";
 
 const Projects = () => {
-  const { currentProfile } = useProfile();
+  const { profileId } = useParams();
+  const { getProfileByProfileId } = useData();
+  const [currentProfile, setCurrentProfile] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const profileData = await getProfileByProfileId(profileId);
+        setCurrentProfile(profileData);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, [profileId, getProfileByProfileId]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!currentProfile) {
+    return <div>Profile not found</div>;
+  }
+
   const { projects } = currentProfile;
 
   return (

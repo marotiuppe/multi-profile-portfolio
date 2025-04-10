@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Routes, Route, Navigate } from 'react-router-dom';
-import { useProfile } from '../../context/ProfileContext';
+import { useData } from '../../context/dataContext';
 import Layout from './Layout';
 import About from '../../pages/About';
 import Resume from '../../pages/Resume';
@@ -10,20 +10,11 @@ import Home from '../../pages/Site';
 
 const ProfileLayout = () => {
   const { profileId } = useParams();
-  const { currentProfile, loading, error } = useProfile();
+  const { getProfileByProfileId } = useData();
+  const profile = getProfileByProfileId(profileId);
 
-  if (loading) {
-    return (
-      <div className="loading-container d-flex align-items-center justify-content-center min-vh-100">
-        <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    );
-  }
-
-  // Redirect to 404 if there's an error or no profile
-  if (error || !currentProfile) {
+  // Redirect to 404 if no profile found
+  if (!profile) {
     return <Navigate to="/404" replace />;
   }
 
@@ -41,4 +32,4 @@ const ProfileLayout = () => {
   );
 };
 
-export default ProfileLayout; 
+export default ProfileLayout;

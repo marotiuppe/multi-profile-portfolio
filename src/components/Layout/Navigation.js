@@ -1,27 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import './Navigation.css';
-import { useProfile } from '../../context/ProfileContext';
+import { useData } from '../../context/dataContext';
 
 const Navigation = () => {
   const [expanded, setExpanded] = useState(false);
-  const { currentProfile, loading, error, profileId } = useProfile();
+  const [profile, setProfile] = useState(null);
+  const { profileId } = useParams();
+  const { getProfileByProfileId } = useData();
   const location = useLocation();
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const profileData = await getProfileByProfileId(profileId);
+        setProfile(profileData);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
+    };
+
+    fetchProfile();
+  }, [profileId, getProfileByProfileId]);
 
   const handleNavClick = () => {
     setExpanded(false);
   };
 
-  if (loading) {
-    return;
+  if (!profile || !profile.navigation) {
+    return null;
   }
 
-  if (error || !currentProfile) {
-    return;
-  }
-
-  const { navigation } = currentProfile;
+  const { navigation } = profile;
 
   return (
     <Navbar expand="lg" className="navbar-custom" expanded={expanded} onToggle={(expanded) => setExpanded(expanded)}>
@@ -31,7 +42,7 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto nav-links">
-            {navigation.links.map((link, index) => (
+            {navigation.links && navigation.links.map((link, index) => (
               <Link
                 key={index}
                 to={link.path}
@@ -48,4 +59,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation; 
+export default Navigation;

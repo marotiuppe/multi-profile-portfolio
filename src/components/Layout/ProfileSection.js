@@ -1,34 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import './ProfileSection.css';
 import SocialIcon from './SocialIcon';
-import { useProfile } from '../../context/ProfileContext';
+import { useData } from '../../context/dataContext';
+import { useParams } from 'react-router-dom';
 import Avatar from '../Avatar';
 
 const ProfileSection = () => {
-  const { currentProfile, loading, error, updateProfile, updateStatus } = useProfile();
+  const { profileId } = useParams();
+  const { getProfileByProfileId, updateData } = useData();
+  const [profile, setProfile] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
   const [editedData, setEditedData] = useState({
     email: '',
     phone: '',
     about: '',
     socialLinks: []
   });
-  const [statusMessage, setStatusMessage] = useState('');
 
   useEffect(() => {
-    if (updateStatus.message) {
-      setStatusMessage(updateStatus.message);
-      
-      // Clear the status message after 3 seconds
+    const fetchProfile = async () => {
+      try {
+        const profileData = await getProfileByProfileId(profileId);
+        setProfile(profileData);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
+    };
+
+    fetchProfile();
+  }, [profileId, getProfileByProfileId]);
+
+  useEffect(() => {
+    if (statusMessage) {
       const timer = setTimeout(() => {
         setStatusMessage('');
       }, 3000);
       
       return () => clearTimeout(timer);
     }
-  }, [updateStatus]);
+  }, [statusMessage]);
 
   const calculateExperience = (startDate) => {
+    if (!startDate) return ''; // Add null check for startDate
+    
     const start = new Date(startDate);
     const today = new Date();
     
@@ -54,26 +69,42 @@ const ProfileSection = () => {
   };
 
   const handleEditClick = () => {
-    if (currentProfile) {
+    if (profile) {
       setEditedData({
-        email: currentProfile.personalInfo.email,
-        phone: currentProfile.personalInfo.phone,
-        about: currentProfile.personalInfo.about,
-        socialLinks: [...currentProfile.socialLinks]
+        email: profile.personalInfo.email,
+        phone: profile.personalInfo.phone,
+        about: profile.personalInfo.about,
+        socialLinks: [...profile.socialLinks]
       });
       setIsEditing(true);
     }
   };
 
-  const handleSaveClick = () => {
-    updateProfile({
+  const handleSaveClick = async () => {
+    const updatedProfile = {
+      ...profile,
       personalInfo: {
+        ...profile.personalInfo,
         email: editedData.email,
         phone: editedData.phone,
         about: editedData.about
       },
       socialLinks: editedData.socialLinks
-    });
+    };
+
+    try {
+      const result = await updateData(profileId, updatedProfile);
+      if (result.success !== false) {
+        setProfile(updatedProfile);
+        setStatusMessage('Profile updated successfully');
+      } else {
+        console.error('Failed to update profile:', result.error);
+        setStatusMessage('Failed to update profile');
+      }
+    } catch (error) {
+      console.error('Error updating profile:', error);
+      setStatusMessage('Error updating profile');
+    }
     setIsEditing(false);
   };
 
@@ -118,29 +149,19 @@ const ProfileSection = () => {
     }));
   };
 
-
-  if (loading) {
-    return <div>Loading...</div>;
+  if (!profile || !profile.personalInfo) {
+    return <div>Loading profile...</div>;
   }
 
-  if (error || !currentProfile) {
-    return <div>Error: {error || 'Profile not found'}</div>;
-  }
-
-  const { personalInfo, socialLinks } = currentProfile;
+  const { personalInfo, socialLinks } = profile;
   const experience = calculateExperience(personalInfo.experienceStartDate);
-  const aboutText = personalInfo.about.replace('{experience}', experience);
+  const aboutText = personalInfo.about ? personalInfo.about.replace('{experience}', experience) : '';
 
   return (
     <div className="profile-container">
       <span className="edit-icon" onClick={() => handleEditClick()}>
         <i className="fas fa-edit"></i>
       </span>
-      {statusMessage && (
-        <div className={`status-message ${updateStatus.success ? 'success' : 'error'}`}>
-          {statusMessage}
-        </div>
-      )}
       
       <div className="avatar-container">
         <Avatar/>
@@ -220,7 +241,7 @@ const ProfileSection = () => {
                     value={social.url}
                     onChange={(e) => handleSocialLinkChange(index, 'url', e.target.value)}
                   />
-                  <button  className="remove-btn ms-1" onClick={() => removeSocialLink(index)} >
+                  <button className="remove-btn ms-1" onClick={() => removeSocialLink(index)}>
                     Remove
                   </button>
                   </div>
@@ -277,8 +298,14 @@ const ProfileSection = () => {
         </button>
         </>
       )}
+
+      {statusMessage && (
+        <div className={`status-message ${statusMessage.includes('success') ? 'success' : 'error'}`}>
+          {statusMessage}
+        </div>
+      )}
     </div>
   );
 };
 
-export default ProfileSection; 
+export default ProfileSection;

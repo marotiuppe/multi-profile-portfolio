@@ -1,32 +1,25 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
+import { useData } from '../context/dataContext';
 import './PasswordValidation.css';
 
 const PasswordValidation = ({ show, onClose, onSuccess, profileId }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { validatePassword } = useData();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
     try {
-      const response = await fetch(`http://localhost:5000/api/profiles/${profileId}/validate-password`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ password }),
-      });
+      const isValid = await validatePassword(profileId, password);
 
-      const data = await response.json();
-
-      if (response.ok) {
-        // Store the password in localStorage for future use
+      if (isValid) {
         localStorage.setItem(`profile_${profileId}_password`, password);
         onSuccess();
       } else {
-        setError(data.error || 'Invalid password');
+        setError('Invalid password');
       }
     } catch (err) {
       setError('Failed to validate password');
@@ -65,4 +58,4 @@ const PasswordValidation = ({ show, onClose, onSuccess, profileId }) => {
   );
 };
 
-export default PasswordValidation; 
+export default PasswordValidation;

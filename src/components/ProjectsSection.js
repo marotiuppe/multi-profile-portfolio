@@ -1,15 +1,18 @@
 import React from 'react';
-import { useProfile } from '../context/ProfileContext';
-import { Box, Typography, Grid, Paper, Card, CardContent, CardActions, Button, Chip } from '@mui/material';
+import { useData } from '../context/dataContext';
+import { Navigate, useParams } from 'react-router-dom';
+import { Box, Typography, Grid, Card, CardContent, CardActions, Button, Chip } from '@mui/material';
 
 const ProjectsSection = () => {
-  const { currentProfile } = useProfile();
+  const { profileId } = useParams();
+  const { getProfileByProfileId } = useData();
+  const profile = getProfileByProfileId(profileId);
   
-  if (!currentProfile) {
-    return null;
+  if (!profile) {
+    return <Navigate to="/404" replace />;
   }
 
-  const { projects } = currentProfile.professionalInfo;
+  const { projects } = profile.professionalInfo;
 
   return (
     <Box sx={{ p: 3 }}>
@@ -75,4 +78,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection; 
+export default ProjectsSection;

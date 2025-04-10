@@ -1,15 +1,18 @@
 import React from 'react';
-import { useProfile } from '../context/ProfileContext';
+import { useData } from '../context/dataContext';
+import { Navigate, useParams } from 'react-router-dom';
 import { Box, Typography, Grid, Paper } from '@mui/material';
 
 const ProfileSection = () => {
-  const { currentProfile } = useProfile();
-  
-  if (!currentProfile) {
-    return null;
+  const { profileId } = useParams();
+  const { getProfileByProfileId } = useData();
+  const profile = getProfileByProfileId(profileId);
+
+  if (!profile) {
+    return <Navigate to="/404" replace />;
   }
 
-  const { personalInfo, socialLinks } = currentProfile;
+  const { personalInfo, socialLinks } = profile;
 
   return (
     <Box sx={{ p: 3 }}>
@@ -75,4 +78,4 @@ const ProfileSection = () => {
   );
 };
 
-export default ProfileSection; 
+export default ProfileSection;

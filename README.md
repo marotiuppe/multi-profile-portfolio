@@ -48,23 +48,38 @@ The application will open in your default browser at `http://localhost:3000`.
 ## 📁 Project Structure
 
 ```
-my-portfolio/
-├── public/
+multi-profile-portfolio/
+├── public/                # Static files and assets
 ├── src/
-│   ├── assets/
-│   │   └── images/        # Project and profile images
-│   ├── components/
-│   │   └── Layout/        # Layout components
-│   ├── context/
-│   │   └── ProfileContext.js  # Profile management
-│   ├── data/
-│   │   └── data.json      # Centralized data store
-│   ├── pages/             # Page components
-│   └── App.js            # Main application component
-└── package.json
+│   ├── assets/           # Project and profile images
+│   ├── components/       # Reusable UI components
+│   ├── context/          # React context providers
+│   ├── data/            # Centralized data store
+│   ├── pages/           # Page components
+│   ├── styles/          # Global and component styles
+│   ├── App.js           # Main application component
+│   ├── App.css          # Main application styles
+│   ├── App.test.js      # Application tests
+│   ├── index.js         # Application entry point
+│   ├── index.css        # Global styles
+│   ├── logo.svg         # Application logo
+│   ├── setupTests.js    # Test configuration
+│   └── reportWebVitals.js # Performance monitoring
+├── package.json         # Project dependencies and scripts
+├── package-lock.json    # Dependency lock file
+├── .env                 # Environment variables
+├── .gitignore          # Git ignore rules
+└── .gitattributes      # Git attributes
 ```
 
 ## 🔧 Configuration
+
+### Environment Setup
+Create a `.env` file in the root directory with the following variables:
+```env
+PORT=3000
+NODE_ENV=development
+```
 
 ### Profile Configuration
 To add or modify profiles, edit the `src/data/data.json` file:
@@ -88,13 +103,13 @@ To add or modify profiles, edit the `src/data/data.json` file:
 ## 🎨 Customization
 
 ### Styling
-- Global styles are in `src/App.css`
-- Component-specific styles are in their respective CSS files
+- Global styles are in `src/App.css` and `src/index.css`
+- Component-specific styles are in `src/styles/`
 - Bootstrap classes are available for quick styling
 
 ### Adding New Features
 1. Create new components in the appropriate directory
-2. Update the routing in `ProfileLayout.js`
+2. Update the routing in `App.js`
 3. Add corresponding data structure in `data.json`
 
 ## 📝 Development Notes

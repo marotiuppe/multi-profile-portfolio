@@ -9,8 +9,8 @@ import Stats from './pages/Stats';
 import Contact from './pages/Contact';
 import { Global, css } from '@emotion/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ProfileProvider } from './context/ProfileContext';
 import { PasswordProvider } from './context/PasswordContext';
+import { DataProvider } from './context/dataContext';
 // import data from './data/data.json';
 import NotFound from './pages/NotFound';
 import './App.css';
@@ -36,18 +36,17 @@ const globalStyles = css`
 
 const ProfileLayout = () => {
   return (
-    <ProfileProvider>
-        <Layout>
-        <Routes>
-          <Route index element={<Site />} />
-          <Route path="about" element={<About />} />
-          <Route path="resume" element={<Resume />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="stats" element={<Stats />} />
-          <Route path="contact" element={<Contact />} />
-        </Routes>
-      </Layout>
-    </ProfileProvider>
+    <Layout>
+      <Routes>
+        <Route index element={<About />} />
+        <Route path="about" element={<About />} />
+        <Route path="resume" element={<Resume />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="stats" element={<Stats />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="site" element={<Site />} />
+      </Routes>
+    </Layout>
   );
 };
 
@@ -56,18 +55,18 @@ function App() {
   // const profileIds = Object.keys(data.profiles);
 
   return (
-    <PasswordProvider>
-      <Router>
-        <Global styles={globalStyles} />
-        <ProfileProvider>
+    <Router>
+      <DataProvider>
+        <PasswordProvider>
+          <Global styles={globalStyles} />
           <Routes>
             <Route path="/" element={<Navigate to="/maroti" replace />} />
             <Route path="/:profileId/*" element={<ProfileLayout />} />
             <Route path="/404" element={<NotFound />} />
           </Routes>
-        </ProfileProvider>
-      </Router>
-    </PasswordProvider>
+        </PasswordProvider>
+      </DataProvider>
+    </Router>
   );
 }
 

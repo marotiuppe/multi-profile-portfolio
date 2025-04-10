@@ -1,20 +1,22 @@
 import React from 'react';
 import defaultImage from '../assets/images/default-avatar.jpg';
-import { useProfile } from '../context/ProfileContext';
+import { useData } from '../context/dataContext';
+import { useParams } from 'react-router-dom';
 
 const Avatar = () => {
-  const { currentProfile, loading, error } = useProfile();
-  if (loading) {
-    return <div>Loading profile...</div>;
-  }
-  if (error || !currentProfile) {
+  const { profileId } = useParams();
+  const { getProfileByProfileId } = useData();
+  
+  const profile = getProfileByProfileId(profileId);
+
+  if (!profile) {
     return <div>Profile not available</div>;
   }
 
   // Import profile image directly
   let profileImage;
   try {
-    profileImage = require(`../assets/images/${currentProfile.personalInfo.profileImageName}`);
+    profileImage = require(`../assets/images/${profile.personalInfo.profileImageName}`);
   } catch (err) {
     profileImage = defaultImage;
   }
@@ -27,4 +29,4 @@ const Avatar = () => {
   />;
 };
 
-export default Avatar; 
+export default Avatar;

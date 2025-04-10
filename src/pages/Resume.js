@@ -2,12 +2,14 @@ import React, { useRef, useState, useEffect } from 'react';
 import html2pdf from 'html2pdf.js';
 import './Resume.css';
 import Avatar from '../components/Avatar';
-import { useProfile } from '../context/ProfileContext';
+import { useData } from '../context/dataContext';
 import { usePassword } from '../context/PasswordContext';
 import PasswordValidation from '../components/PasswordValidation';
 import { useParams } from 'react-router-dom';
 
 const calculateDuration = (startDate, endDate = new Date()) => {
+  if (!startDate) return '';
+  
   const start = new Date(startDate);
   const end = endDate === 'present' ? new Date() : new Date(endDate);
   
@@ -27,10 +29,9 @@ const calculateDuration = (startDate, endDate = new Date()) => {
 const Resume = () => {
   const resumeRef = useRef(null);
   const { profileId } = useParams();
-  const { currentProfile, updateProfile, updateStatus } = useProfile();
+  const { getProfileByProfileId, updateData } = useData();
   const { isProfileValidated, validateProfile } = usePassword();
-  const { personalInfo = {}, resume = {} } = currentProfile || {};
-  const { experiences = [], projects = [], education = [], skills = {}, socialLinks = [] } = resume;
+  const [profile, setProfile] = useState(null);
   
   // State for edit mode
   const [isEditing, setIsEditing] = useState(false);
@@ -82,30 +83,49 @@ const Resume = () => {
   };
   
   useEffect(() => {
-    if (updateStatus.message) {
-      setStatusMessage(updateStatus.message);
-      
-      // Clear the status message after 3 seconds
+    const fetchProfile = async () => {
+      try {
+        const profileData = await getProfileByProfileId(profileId);
+        setProfile(profileData);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
+    };
+
+    fetchProfile();
+  }, [profileId, getProfileByProfileId]);
+
+  useEffect(() => {
+    if (statusMessage) {
       const timer = setTimeout(() => {
         setStatusMessage('');
       }, 3000);
       
       return () => clearTimeout(timer);
     }
-  }, [updateStatus]);
+  }, [statusMessage]);
   
   // Initialize edited data when entering edit mode
   useEffect(() => {
-    if (isEditing) {
+    if (isEditing && profile) {
+      const { personalInfo = {}, resume = {} } = profile;
+      const { experiences = [], projects = [], education = [], skills = {}, socialLinks = [] } = resume;
+      
       setEditedExperiences([...experiences]);
       setEditedProjects([...projects]);
       setEditedEducation([...education]);
       setEditedSkills({...skills});
       setEditedPersonalInfo({...personalInfo});
-      // Initialize socialLinks
       setEditedSocialLinks([...socialLinks]);
     }
-  }, [isEditing, experiences, projects, education, skills, personalInfo, socialLinks]);
+  }, [isEditing, profile]);
+
+  if (!profile) {
+    return <div className="resume-container">Loading...</div>;
+  }
+
+  const { personalInfo = {}, resume = {} } = profile;
+  const { experiences = [], projects = [], education = [], skills = {}, socialLinks = [] } = resume;
   
   const handlePasswordValidation = (action) => {
     if (!isProfileValidated(profileId)) {
@@ -316,7 +336,8 @@ const Resume = () => {
   
   // Function to save all changes
   const handleSaveResume = () => {
-    updateProfile({
+    const updatedProfile = {
+      ...profile,
       personalInfo: editedPersonalInfo,
       resume: {
         experiences: editedExperiences,
@@ -325,7 +346,11 @@ const Resume = () => {
         skills: editedSkills,
         socialLinks: editedSocialLinks
       }
-    });
+    };
+
+    updateData(profileId, updatedProfile);
+    setStatusMessage('Resume updated successfully');
+    
     setIsEditing(false);
     setEditingSection(null);
     setEditingItemIndex(null);
@@ -372,38 +397,6 @@ const Resume = () => {
 
   return (
     <>
-      <PasswordValidation
-        show={showPasswordModal}
-        onClose={() => setShowPasswordModal(false)}
-        onSuccess={handlePasswordSuccess}
-        profileId={profileId}
-      />
-      <div className="resume-controls">
-        <button onClick={downloadPDF} className="download-button">
-          Download Resume
-        </button>
-        {!isEditing ? (
-          <button onClick={toggleEditMode} className="edit-btn">
-            Edit Resume
-          </button>
-        ) : (
-          <>
-            <button onClick={handleSaveResume} className="save-btn">
-              Save Resume
-            </button>
-            <button onClick={toggleEditMode} className="cancel-btn">
-              Cancel
-            </button>
-          </>
-        )}
-      </div>
-      
-      {statusMessage && (
-        <div className={`status-message ${updateStatus.success ? 'success' : 'error'}`}>
-          {statusMessage}
-        </div>
-      )}
-      
       <div ref={resumeRef} className={`resume-container ${isEditing ? 'edit-mode' : ''}`}>
         <div className="resume-header">
           <div className="profile-section">
@@ -1251,6 +1244,39 @@ const Resume = () => {
           )}
         </div>
       </div>
+
+      <PasswordValidation
+        show={showPasswordModal}
+        onClose={() => setShowPasswordModal(false)}
+        onSuccess={handlePasswordSuccess}
+        profileId={profileId}
+      />
+      
+      <div className="resume-controls">
+        <button onClick={downloadPDF} className="download-button">
+          Download Resume
+        </button>
+        {!isEditing ? (
+          <button onClick={toggleEditMode} className="edit-btn">
+            Edit Resume
+          </button>
+        ) : (
+          <>
+            <button onClick={handleSaveResume} className="save-btn">
+              Save Resume
+            </button>
+            <button onClick={toggleEditMode} className="cancel-btn">
+              Cancel
+            </button>
+          </>
+        )}
+      </div>
+      
+      {statusMessage && (
+        <div className={`status-message ${statusMessage.includes('success') ? 'success' : 'error'}`}>
+          {statusMessage}
+        </div>
+      )}
     </>
   );
 };

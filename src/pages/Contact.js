@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import './PageStyles.css';
 import './Contact.css';
-import { useProfile } from '../context/ProfileContext';
+import { useData } from '../context/dataContext';
+import { useParams } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,8 +16,35 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [currentProfile, setCurrentProfile] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const { currentProfile } = useProfile();
+  const { profileId } = useParams();
+  const { getProfileByProfileId } = useData();
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const profile = await getProfileByProfileId(profileId);
+        setCurrentProfile(profile);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, [profileId, getProfileByProfileId]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!currentProfile) {
+    return <div>Profile not found</div>;
+  }
+
   const { personalInfo } = currentProfile;
 
   const handleChange = (e) => {
@@ -214,4 +242,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

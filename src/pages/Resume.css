@@ -1,7 +1,11 @@
 .resume-container {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* margin: 32px auto; */
+  /* padding: 2rem; */
+  /* background-color: white; */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  position: relative;
+  z-index: 1;
 }
 
 /* Page break rules */
@@ -248,15 +252,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .resume-controls {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 0;
-  background-color: transparent;
+  gap: 1rem;
   z-index: 1000;
-  padding: 1rem 0;
 }
 
 .toggle-profile-button {
@@ -409,6 +410,16 @@ h1, h2, h3, h4, h5, h6 {
   .download-button {
     bottom: 1rem;
     right: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .resume-controls {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .edit-btn, .save-btn, .cancel-btn, .download-button {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
@@ -565,52 +576,46 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 
-.save-btn, .cancel-btn, .edit-btn, .delete-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
+.edit-btn, .save-btn, .cancel-btn {
+  padding: 0.8rem 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.save-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-}
-
-.save-btn:hover {
-  background-color: #0069d9;
-}
-
-.cancel-btn {
-  background-color: #6c757d;
-  color: white;
-  border: none;
-}
-
-.cancel-btn:hover {
-  background-color: #5a6268;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .edit-btn {
   background-color: #28a745;
-  color: white;
-  border: none;
+}
+
+.save-btn {
+  background-color: #007bff;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
 }
 
 .edit-btn:hover {
   background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.delete-btn {
-  background-color: #dc3545;
-  color: white;
-  border: none;
+.save-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.delete-btn:hover {
-  background-color: #c82333;
+.cancel-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .item-edit-container {
@@ -655,16 +660,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .status-message {
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 500;
   position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 2000;
-  max-width: 300px;
+  bottom: 6rem;
+  right: 2rem;
+  z-index: 1000;
+  padding: 1rem;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .status-message.success {
@@ -810,4 +812,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-info-form {
   margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 } 
