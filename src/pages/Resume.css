@@ -256,8 +256,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 5rem;
   right: 2rem;
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   z-index: 1000;
+  flex-direction: column
 }
 
 .toggle-profile-button {
@@ -414,12 +415,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
   }
 
-  .resume-controls {
+  /* .resume-controls {
     top: 1rem;
     right: 1rem;
-  }
+  } */
 
-  .edit-btn, .save-btn, .cancel-btn, .download-button {
+  .edit-btn, .save-btn, .cancel-btn, .download-button, .ats-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
@@ -576,16 +577,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 
-.edit-btn, .save-btn, .cancel-btn {
-  padding: 0.8rem 1.5rem;
+.edit-btn, .save-btn, .cancel-btn, .ats-btn {
+  padding: 0.3rem 0.5rem;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  /* margin-top: 3rem; */
+  margin-bottom: 1rem;
 }
 
 .edit-btn {
@@ -598,6 +601,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .cancel-btn {
   background-color: #6c757d;
+}
+
+.ats-btn {
+  background-color: #9f28a7;
 }
 
 .edit-btn:hover {
@@ -614,6 +621,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .cancel-btn:hover {
   background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ats-btn:hover {
+  background-color: #7a00a7;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -820,5 +833,298 @@ h1, h2, h3, h4, h5, h6 {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* ATS Resume Layout */
+.ats-resume {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 2rem;
+  background: white;
+}
+
+/* left side */
+.ats-left-side {
+  flex: 1;
+}
+
+/* Header Styles */
+.ats-header {
+  margin-bottom: 1rem;
+}
+
+.ats-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Title Bar Styles */
+.ats-title-bar {
+  color: #0078d4;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ats-title-bar .separator {
+  color: #0078d4;
+  margin: 0 0.25rem;
+}
+
+/* Contact Links */
+.ats-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.ats-contact-links span {
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ats-contact-links i {
+  color: #666;
+  font-size: 0.9rem;
+  width: 16px;
+}
+
+/* Section Styles */
+.ats-section {
+  margin-bottom: 2rem;
+}
+
+.ats-section h2 {
+  font-size: 1rem;
+  color: #000;
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.ats-summary p {
+  font-size: 0.8rem;
+}
+
+/* Experience Section */
+.ats-experience {
+  margin-bottom: 1rem;
+}
+
+.ats-experience-title h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.1rem;
+}
+
+.ats-experience-title, .ats-company {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-link {
+  font-size: 0.7rem;
+  color: #0078d4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ats-exp-details {
+  display: flex;
+  gap: 2rem;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.ats-date, .ats-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.ats-achievements {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ats-achievements li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.ats-achievements li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #666;
+}
+
+/* Education Section */
+.ats-education {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.ats-education-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.ats-education-content h3 {
+  font-size: 0.9rem;
+  color: #0078d4;
+  margin-bottom: 0.2rem;
+}
+
+.ats-education-content p {
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Projects Section */
+.ats-projects {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.ats-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.ats-project-content h3 {
+  font-size: 0.9rem;
+  color: #0078d4;
+  margin-bottom: 0.2rem;
+}
+
+.ats-project-content p {
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ats-project-header p {
+  color: #e69138;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+/* right side */
+.ats-right-side {
+  flex: 1;
+  width: 316px;
+}
+.ats-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.ats-skill-tag-group {
+  margin-bottom: 1rem;
+}
+.ats-skills { 
+  display: flex;
+  flex-flow: wrap; 
+}  
+
+.ats-skill-tag-group {  
+  margin-bottom: 15px;  
+}  
+
+.skill-tag {  
+  font-weight: bold;  
+  font-size: 1.2em;  
+  margin-bottom: 5px;  
+  background-color: #e0f7fa;
+  padding: 5px 10px;  
+  border-radius: 5px;  
+}  
+
+.skill-items {  
+  display: flex;  
+  flex-wrap: wrap; 
+  width: fit-content; 
+}  
+
+.skill-item {  
+  background-color: #bbdefb;
+  color: #0d47a1;
+  padding: 5px 10px;  
+  border-radius: 15px;  
+  margin: 5px;  
+  font-size: 0.69em;  
+}  
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f0f7ff;
+  color: #0078d4;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin: 0.25rem;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .ats-resume {
+    grid-template-columns: 1fr;
+  }
+
+  .ats-skills-sidebar {
+    padding-top: 0;
+  }
+
+  .ats-exp-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media print {
+  .ats-resume {
+    grid-template-columns: 1fr 200px;
+    padding: 0;
+  }
+
+  .skill-tag {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 } 
