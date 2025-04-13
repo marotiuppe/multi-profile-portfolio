@@ -46,6 +46,7 @@ export const DataProvider = ({ children }) => {
       
       // Update the local storage cache  
       localStorage.setItem(`profile-${profileId}`, JSON.stringify(result));  
+      localStorage.setItem(`profile-${profileId}`, JSON.stringify(updatedData));  
 
       return result;  
     } catch (error) {  

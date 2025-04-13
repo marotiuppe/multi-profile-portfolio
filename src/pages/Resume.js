@@ -351,6 +351,7 @@ const Resume = () => {
     };
 
     updateData(profileId, updatedProfile);
+    setProfile(updatedProfile);
     setStatusMessage('Resume updated successfully');
     
     setIsEditing(false);
@@ -1431,7 +1432,10 @@ const Resume = () => {
 
       <PasswordValidation
         show={showPasswordModal}
-        onClose={() => setShowPasswordModal(false)}
+        onClose={() => {
+          setShowPasswordModal(false);
+          setIsEditing(false);
+        }}
         onSuccess={handlePasswordSuccess}
         profileId={profileId}
       />

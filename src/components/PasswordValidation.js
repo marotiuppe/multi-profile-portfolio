@@ -19,9 +19,11 @@ const PasswordValidation = ({ show, onClose, onSuccess, profileId }) => {
         localStorage.setItem(`profile_${profileId}_password`, password);
         onSuccess();
       } else {
+        onClose();
         setError('Invalid password');
       }
     } catch (err) {
+      onClose();
       setError('Failed to validate password');
     }
   };
