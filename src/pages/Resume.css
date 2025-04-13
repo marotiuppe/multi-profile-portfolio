@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 1rem;
   } */
 
-  .edit-btn, .save-btn, .cancel-btn, .download-button, .ats-btn {
+  .edit-btn, .save-btn, .cancel-btn, .download-button, .ats-btn, .delete-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
@@ -577,7 +577,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 
-.edit-btn, .save-btn, .cancel-btn, .ats-btn {
+.edit-btn, .save-btn, .cancel-btn, .ats-btn, .delete-btn {
   padding: 0.3rem 0.5rem;
   color: white;
   border: none;
@@ -603,6 +603,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #6c757d;
 }
 
+.delete-btn {
+  background-color: #dc3545;
+}
+
 .ats-btn {
   background-color: #9f28a7;
 }
@@ -621,6 +625,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .cancel-btn:hover {
   background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

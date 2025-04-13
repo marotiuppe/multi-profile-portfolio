@@ -59,7 +59,7 @@ const About = () => {
   return (
     <div className="about-container">
       <h1 className="about-title">ABOUT ME</h1>
-      <p className="last-updated">(UPDATED MAY 2024)</p>
+      <p className="last-updated">(UPDATED {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase()})</p>
 
       <section className="about-section">
         <h2 className="section-title">INTRO</h2>
