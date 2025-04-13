@@ -10,6 +10,10 @@
   margin-bottom: 0.5rem;
   color: #333;
   letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .projects-subtitle {
@@ -117,6 +121,179 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.projects-edit-container {
+  margin-top: 2rem;
+}
+
+.projects-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-edit-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.project-edit-card:hover {
+  transform: translateY(-2px);
+}
+
+.project-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-edit-header h3 {
+  color: #333;
+  margin: 0;
+}
+
+.remove-project-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.remove-project-btn:hover {
+  background: #c82333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-height: 100px;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.add-project-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.add-project-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.add-project-btn:hover {
+  background: #0056b3;
+}
+
+.project-actions{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-project-btn {
+  background: white;
+  color: #0056b3;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+  margin-bottom: 13px;
+}
+
+.save-cancel-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-edit-button{
+  background-color: #28a745;
+}
+.project-save-button{
+  background-color: #007bff;
+}
+.project-cancel-button{
+  background-color: #666;
+}
+
+.project-edit-button, .project-save-button, .project-cancel-button {
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.project-actions .edit-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  margin-bottom: 15px;
+  padding: 0px;
+}
+
 @media (max-width: 768px) {
   .projects-container {
     padding: 1rem;
@@ -133,4 +310,4 @@
   .project-technologies h3 {
     font-size: 0.9rem;
   }
-} 
+}

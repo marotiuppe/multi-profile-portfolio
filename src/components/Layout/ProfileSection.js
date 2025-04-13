@@ -158,11 +158,7 @@ const ProfileSection = () => {
   const aboutText = personalInfo.about ? personalInfo.about.replace('{experience}', experience) : '';
 
   return (
-    <div className="profile-container">
-      <span className="edit-icon" onClick={() => handleEditClick()}>
-        <i className="fas fa-edit"></i>
-      </span>
-      
+    <div className="profile-container">      
       <div className="avatar-container">
         <Avatar/>
       </div>
