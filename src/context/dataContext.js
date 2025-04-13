@@ -11,7 +11,7 @@ export const DataProvider = ({ children }) => {
         throw new Error('Profile not found');  
       }  
       const data = await response.json();
-      return data.profile;  
+      return data;  
     } catch (error) {  
       console.error('Error getting profile:', error);  
       return null;  
