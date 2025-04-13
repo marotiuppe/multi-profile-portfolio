@@ -5,22 +5,12 @@ const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:500
 
 export const DataProvider = ({ children }) => {  
   const getProfileByProfileId = async (profileId) => {  
-    // Check local storage first  
-    const cachedProfile = localStorage.getItem(`profile-${profileId}`);  
-    if (cachedProfile) {  
-      return JSON.parse(cachedProfile); // Return cached data  
-    }  
-
     try {  
       const response = await fetch(`${API_BASE_URL}/profiles/${profileId}`);  
       if (!response.ok) {  
         throw new Error('Profile not found');  
       }  
-      const data = await response.json();  
-
-      // Cache the data in local storage  
-      localStorage.setItem(`profile-${profileId}`, JSON.stringify(data));  
-
+      const data = await response.json();
       return data;  
     } catch (error) {  
       console.error('Error getting profile:', error);  
@@ -42,11 +32,7 @@ export const DataProvider = ({ children }) => {
         throw new Error('Failed to update data');  
       }  
 
-      const result = await response.json();  
-      
-      // Update the local storage cache  
-      localStorage.setItem(`profile-${profileId}`, JSON.stringify(updatedData));  
-
+      const result = await response.json(); 
       return result;  
     } catch (error) {  
       console.error('Error updating data:', error);  

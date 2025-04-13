@@ -1,6 +1,6 @@
 import React from 'react';
 import { useData } from '../context/dataContext';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Box, Typography, Grid, Paper } from '@mui/material';
 
 const ProfileSection = () => {
@@ -9,7 +9,7 @@ const ProfileSection = () => {
   const profile = getProfileByProfileId(profileId);
 
   if (!profile) {
-    return <Navigate to="/404" replace />;
+    return <div>Loading Profile...</div>;
   }
 
   const { personalInfo, socialLinks } = profile;
